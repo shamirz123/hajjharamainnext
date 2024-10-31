@@ -12723,10 +12723,6 @@ button.mfp-arrow {
     position: relative;
     /* Important for absolute positioning of submenu */
 }
-.inner-menu>li {
-    position: relative;
-    /* Important for absolute positioning of submenu */
-}
 
 
 .submenu,
@@ -14317,7 +14313,7 @@ button.mfp-arrow {
 .latest-project-carousel-container .carousel-control-next,
 .latest-project-carousel-container .carousel-control-prev {
     width: 2%;
-    height: 190px;
+    height: 290px;
 }
 
 /* latestProject Page css End */
@@ -15330,9 +15326,6 @@ button.mfp-arrow {
     }
 
     .menu-light-mobiles .menu {
-        background-color: rgb(41, 44, 49) !important;
-    }
-    .menu-light-mobiles .inner-menu {
         background-color: rgb(41, 44, 49) !important;
     }
 

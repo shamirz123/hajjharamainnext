@@ -10,13 +10,13 @@ function HomeContent() {
             Performing Hajj is a once-in-a-lifetime journey, and our team is
             dedicated to making this spiritual experience fulfilling and
             stress-free. Our Hajj packages are tailored to meet the unique needs
-            of pilgrims from the UAE. Whether you&apos;re planning ahead or need last
+            of pilgrims from the UAE. Whether you're planning ahead or need last
             minute Hajj deals, we provide options that cater to every
             requirement and budget.
           </p>
           <h3>Hajj Packages from UAE – Tailored Just for You</h3>
           <p>
-            First-time pilgrims to seasoned travelers, Hajjharamain provides
+            first-time pilgrims to seasoned travelers, Hajjharamain provides
             tailored Hajj packages from Dubai, complete with transportation,
             accommodation, and additional support. Our Hajj packages from UAE
             are designed to give you ease and convenience so you can focus on
@@ -39,7 +39,7 @@ function HomeContent() {
           <p>
             Ready to start your journey? Contact us today and let Hajjharamain
             guide you on this sacred path. We are here to answer all your
-            questions, whether you&apos;re seeking Hajj from the UAE or specific
+            questions, whether you’re seeking Hajj from the UAE or specific
             services like a Hajj package from Dubai. Our commitment is to
             provide you with a smooth, spiritual, and memorable pilgrimage
             experience.

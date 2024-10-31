@@ -94,7 +94,7 @@ const LatestProjects = () => {
               <Carousel
                 activeIndex={index}
                 onSelect={handleSelect}
-                controls={projects?.length > 3}
+                controls={true}
                 indicators={false}
               >
                 {groupedProjects.map((group, groupIndex) => (

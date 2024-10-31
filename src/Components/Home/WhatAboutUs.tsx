@@ -1,4 +1,5 @@
 import React from "react";
+import { CiHeart } from "react-icons/ci";
 
 function WhatAboutUs() {
   return (
@@ -27,7 +28,7 @@ function WhatAboutUs() {
                     comfortable journey.
                   </li>
                   <li>
-                    <strong>Flexible Options:</strong> Whether you&apos;re looking
+                    <strong>Flexible Options:</strong> Whether you're looking
                     for a Hajj package from Dubai or simply want assistance with
                     travel arrangements, we have flexible options to meet your
                     schedule.
