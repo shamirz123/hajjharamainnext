@@ -36,6 +36,9 @@ function HomeBanner() {
                   backgroundImage: `url(${image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  height: "100vh", // Set your desired height
+                  width: "100%",
                 }}
               >
                 {/* Black overlay */}
