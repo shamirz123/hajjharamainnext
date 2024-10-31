@@ -76,7 +76,7 @@ function HomeBanner() {
         </Carousel>
 
         {/* Thumbnails for navigation */}
-        <div className="thumbnail-container">
+        {/* <div className="thumbnail-container">
           {images.map((image, index) => (
             <Image
               key={index}
@@ -88,7 +88,7 @@ function HomeBanner() {
               height={100}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   );
