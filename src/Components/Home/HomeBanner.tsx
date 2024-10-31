@@ -4,10 +4,10 @@ import { Carousel } from "react-bootstrap";
 
 function HomeBanner() {
   const images = [
-    "/assets/images/demo/BannerImage1.webp",
-    "/assets/images/demo/BannerImage2.webp",
-    "/assets/images/demo/BannerImage3.webp",
-    "/assets/images/demo/BannerImage4.webp",
+    "/assets/images/demo/homeImage1.webp",
+    "/assets/images/demo/homeImage2.webp",
+    "/assets/images/demo/homeImage3.webp",
+    "/assets/images/demo/homeImage4.webp",
   ];
 
   // State to keep track of the active slide
