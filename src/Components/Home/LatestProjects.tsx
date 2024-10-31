@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState, useRef } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Modal from "react-bootstrap/Modal";
@@ -105,12 +106,15 @@ const LatestProjects = () => {
                           <div
                             className="portfolio-2"
                             onClick={() => openModal(project.videoId)}
+                            style={{
+                              backgroundImage: `url(https://img.youtube.com/vi/${project.videoId}/hqdefault.jpg)`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                              height: "323px", // Adjust height as needed
+                              position: "relative",
+                              cursor: "pointer",
+                            }}
                           >
-                            <img
-                              src={`https://img.youtube.com/vi/${project.videoId}/hqdefault.jpg`}
-                              alt={project.title}
-                              className="img-fluid"
-                            />
                             <div className="mask"></div>
                             <div className="portfolio-2-details">
                               <h3 className="title">
