@@ -28,7 +28,7 @@ function WhatAboutUs() {
                     comfortable journey.
                   </li>
                   <li>
-                    <strong>Flexible Options:</strong> Whether you're looking
+                    <strong>Flexible Options:</strong> Whether you&apos;re looking
                     for a Hajj package from Dubai or simply want assistance with
                     travel arrangements, we have flexible options to meet your
                     schedule.
