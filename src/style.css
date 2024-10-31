@@ -12723,6 +12723,10 @@ button.mfp-arrow {
     position: relative;
     /* Important for absolute positioning of submenu */
 }
+.inner-menu>li {
+    position: relative;
+    /* Important for absolute positioning of submenu */
+}
 
 
 .submenu,
@@ -15326,6 +15330,9 @@ button.mfp-arrow {
     }
 
     .menu-light-mobiles .menu {
+        background-color: rgb(41, 44, 49) !important;
+    }
+    .menu-light-mobiles .inner-menu {
         background-color: rgb(41, 44, 49) !important;
     }
 
