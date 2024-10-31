@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 
@@ -27,6 +28,7 @@ function HomeBanner() {
           indicators={false} // Disable default indicators
           activeIndex={activeIndex}
           onSelect={handleSelect}
+          interval={10000}
         >
           {images.map((image, index) => (
             <Carousel.Item key={index}>
@@ -74,7 +76,7 @@ function HomeBanner() {
         </Carousel>
 
         {/* Thumbnails for navigation */}
-        {/* <div className="thumbnail-container">
+        <div className="thumbnail-container">
           {images.map((image, index) => (
             <Image
               key={index}
@@ -86,7 +88,7 @@ function HomeBanner() {
               height={100}
             />
           ))}
-        </div> */}
+        </div>
       </div>
     </>
   );
