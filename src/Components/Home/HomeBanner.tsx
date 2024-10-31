@@ -38,7 +38,7 @@ function HomeBanner() {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  height: "100vh", // Set your desired height
+                  height: "100vh", 
                   width: "100%",
                 }}
               >
