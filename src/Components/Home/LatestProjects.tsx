@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useState, useRef } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Modal from "react-bootstrap/Modal";
