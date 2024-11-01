@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { IoGift } from "react-icons/io5";

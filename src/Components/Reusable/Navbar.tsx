@@ -6,7 +6,7 @@ import {
   FaFacebookF,
   FaGooglePlusG,
   FaLinkedinIn,
-  FaPlus,
+  
   FaGlobe,
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -14,7 +14,6 @@ import { IoIosCall } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import { RiPinterestFill } from "react-icons/ri";
 import Image from "next/image";
-import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Dropdown } from "react-bootstrap";
 
