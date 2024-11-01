@@ -7406,10 +7406,14 @@ button:active {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 400;
+    list-style: none;
+
+    padding: 15px 0px;
 }
 
 .vertical-menu .panel-title a {
     display: block;
+    color: #FFF;
 }
 
 .vertical-menu .panel-title:hover a,
@@ -8075,6 +8079,10 @@ button:active {
     transition: all 0.3s ease-out;
 }
 
+.box-services-2 img {
+    width: 100%;
+}
+
 .box-services-2:hover .icon {
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
@@ -8285,11 +8293,13 @@ button:active {
 /* Box services style 6 */
 .box-services-6 {
     padding: 25px 20px;
-    border: 1px solid #d2cbcb;
-    border-radius: 2px;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 450px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    border: 1px solid #ecedf0;
 }
 
 
@@ -10790,7 +10800,7 @@ button:active {
 }
 
 .panel-heading {
-    padding: 7px 0;
+    padding: 15px 0;
     border-bottom: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -13572,6 +13582,76 @@ button.mfp-arrow {
 /* Home Banner End */
 
 
+/* VideoBanner Css */
+.banner-item-container {
+    position: relative;
+    height: 46rem;
+}
+
+.videoBanner-Content {
+    position: absolute;
+    bottom: 25%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
+.videoBanner-Content .heading {
+    position: relative;
+    font-size: 1rem;
+    font-weight: bold;
+    height: auto;
+    overflow: hidden;
+}
+
+.videoBanner-Content p {
+    animation: slideUp 1.5s ease-out;
+    color: #f4f5f7;
+}
+
+.videoBanner-Content button {
+    animation: slideUp 2.5s ease-out;
+}
+
+.videoBanner-Content .text {
+    position: relative;
+    font-size: 14px;
+    font-weight: normal;
+    height: auto;
+    overflow: hidden;
+}
+
+.videoBanner-Content .button {
+    position: relative;
+    font-size: 16px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.banner-item-container button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 7px;
+    color: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.banner-item-container button:hover {
+    background-color: rgb(252, 200, 19);
+    color: #FFF;
+    border: 1px solid rgb(252, 200, 19);
+}
+
+/* VideoBanner Css End */
+
+
 
 
 
@@ -13630,6 +13710,44 @@ button.mfp-arrow {
 .header-wrapper.fade-out {
     background-color: rgba(41, 44, 49, 0);
 }
+
+.desktop-menu-icon span {
+    padding: 5px 25px;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+
+}
+
+.offcanvas-background {
+    background-image: url('/assets/images/demo/bg04.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+
+}
+
+.custom-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.offcanvas-body .relative {
+    padding: 60px;
+}
+
 
 /* .secondary-header-wrapper.fade-out {
     background-color: rgba(41, 44, 49, 0.95);
@@ -13706,6 +13824,17 @@ button.mfp-arrow {
 /* Optional media query for mobile view adjustments */
 
 
+.dropdown-item {
+    color: #FFF;
+}
+
+.language-icon {
+    color: rgb(252, 200, 19);
+}
+
+.dropdown-toggle::after {
+    color: rgb(252, 200, 19);
+}
 
 
 /* Navbar css End */
@@ -13958,7 +14087,7 @@ button.mfp-arrow {
 /* About css */
 .about-us-image {
     position: relative;
-    background: url(/assets/images/demo/bg50.jpg);
+    background: url("/assets/images/demo/choose-us-image.webp");
     width: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -14294,6 +14423,12 @@ button.mfp-arrow {
 
 
 /* latestProject Page css */
+.video-carousel-container .carousel-control-next,
+.video-carousel-container .carousel-control-prev {
+    width: 2%;
+    height: 500px;
+}
+
 .carousel-container .carousel-control-next,
 .carousel-container .carousel-control-prev {
     width: 2%;
@@ -14305,8 +14440,10 @@ button.mfp-arrow {
 }
 
 .latest-project-carousel-container .carousel-control-prev-icon,
-.latest-project-carousel-container .carousel-control-next-icon {
-    height: 100px;
+.latest-project-carousel-container .carousel-control-next-icon,
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 75px;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -14315,6 +14452,27 @@ button.mfp-arrow {
     width: 2%;
     height: 290px;
 }
+
+.video-carousel-container {
+    position: relative;
+}
+
+.video-carousel-container .carousel-control-next,
+.video-carousel-container .carousel-control-prev {
+    width: 2%;
+    height: 500px;
+    opacity: 0;
+    /* Hide arrows initially */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for appearance */
+}
+
+.video-carousel-container:hover .carousel-control-next,
+.video-carousel-container:hover .carousel-control-prev {
+    opacity: 1;
+    /* Show arrows on hover */
+}
+
 
 
 

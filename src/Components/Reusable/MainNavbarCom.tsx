@@ -22,6 +22,8 @@ const MainNavbarCom = () => {
             break;
         case "/packages":
             content = <SecondaryNavbar heading="Packages" breadcrumbs={["home", "pages", "packages"]} />;
+        case "/apply-now":
+            content = <SecondaryNavbar heading="Apply now" breadcrumbs={["home", "pages", "apply now"]} />;
             break;
         default:
             content = <SecondaryNavbar heading="" breadcrumbs={["home", "pages"]} />;

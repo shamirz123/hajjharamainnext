@@ -9,7 +9,7 @@ const BrandLogos = () => {
           <div className="col-sm-6 col-md-3 sm-box">
             <a href="#">
               <Image
-                src="/assets/images/demo/client01.png"
+                src="/assets/images/demo/certifiedLogo1.webp"
                 alt="client"
                 width={160}
                 height={60}
@@ -19,7 +19,7 @@ const BrandLogos = () => {
           <div className="col-sm-6 col-md-3 sm-box">
             <a href="#">
               <Image
-                src="/assets/images/demo/client02.png"
+                src="/assets/images/demo/certifiedLogo2.webp"
                 alt="client"
                 width={160}
                 height={60}
@@ -29,7 +29,7 @@ const BrandLogos = () => {
           <div className="col-sm-6 col-md-3 xs-box">
             <a href="#">
               <Image
-                src="/assets/images/demo/client03.png"
+                src="/assets/images/demo/certifiedLogo3.webp"
                 alt="client"
                 width={160}
                 height={60}
@@ -39,7 +39,7 @@ const BrandLogos = () => {
           <div className="col-sm-6 col-md-3">
             <a href="#">
               <Image
-                src="/assets/images/demo/client04.png"
+                src="/assets/images/demo/certifiedLogo4.webp"
                 alt="client"
                 width={160}
                 height={60}

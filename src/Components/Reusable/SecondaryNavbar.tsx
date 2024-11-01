@@ -30,7 +30,7 @@ const menuItems = [
   { name: "Home", path: "/" },
   { name: "Packages", path: "/packages" },
   { name: "Serviced Countries", path: "/serviced-countries" },
-  { name: "Apply Now", path: "#" },
+  { name: "Apply Now", path: "/apply-now" },
   {
     name: "About Us",
     path: "/about-us",

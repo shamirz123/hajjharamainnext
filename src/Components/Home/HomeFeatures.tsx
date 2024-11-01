@@ -13,14 +13,14 @@ const HomeFeatures = () => {
     },
     {
       id: 2,
-      icon: "/assets/images/demo/hajj-guide.svg",
+      icon: "/assets/images/demo/hajj-guide.png",
       title: "Hajj Guide",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim temporibus quae, aliquid!",
     },
     {
       id: 3,
-      icon: "/assets/images/demo/Faq.svg",
+      icon: "/assets/images/demo/faqs.png",
       title: "Faq's",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim temporibus quae, aliquid!",

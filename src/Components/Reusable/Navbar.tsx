@@ -6,12 +6,17 @@ import {
   FaFacebookF,
   FaGooglePlusG,
   FaLinkedinIn,
+  FaPlus,
+  FaGlobe,
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosCall } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import { RiPinterestFill } from "react-icons/ri";
 import Image from "next/image";
+import Button from "react-bootstrap/Button";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { Dropdown } from "react-bootstrap";
 
 const socialLinks = [
   { icon: <FaTwitter />, url: "#" },
@@ -25,7 +30,7 @@ const menuItems = [
   { name: "Home", path: "/" },
   { name: "Packages", path: "/packages" },
   { name: "Serviced Countries", path: "/serviced-countries" },
-  { name: "Apply Now", path: "#" },
+  { name: "Apply Now", path: "/apply-now" },
   {
     name: "About Us",
     path: "/about-us",
@@ -42,6 +47,10 @@ const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
@@ -74,13 +83,11 @@ const Navbar = () => {
 
   return (
     <div
-      className={`  header-transparent menu-fixed-dark menu-dark-mobiles menu-dark ${
+      className={`header-transparent menu-fixed-dark menu-dark-mobiles menu-dark ${
         isScrolled ? "scrolled" : ""
-      } `}
+      }`}
     >
-      <div
-        className={`topbar  d-none d-lg-block ${isScrolled ? "hidden" : ""}`}
-      >
+      <div className={`topbar d-none d-lg-block ${isScrolled ? "hidden" : ""}`}>
         <div className="main-header">
           <div className="container">
             <div className="row">
@@ -113,9 +120,9 @@ const Navbar = () => {
       </div>
 
       <header
-        className={`  header-wrapper ${isScrolled ? "sticky" : ""} ${
+        className={`header-wrapper ${isScrolled ? "sticky" : ""} ${
           fadeOut ? "fade-out" : ""
-        } `}
+        }`}
       >
         <div className="">
           <div className="container">
@@ -124,7 +131,6 @@ const Navbar = () => {
                 <Link href="/">
                   <Image
                     src="/assets/images/website-logo.svg"
-                    className=""
                     alt="Website logo"
                     width={100}
                     height={100}
@@ -139,9 +145,7 @@ const Navbar = () => {
                   <GiHamburgerMenu />
                 </div>
                 <nav className="navbar-right">
-                  <ul
-                    className={` menu ${isNavVisible ? "visible" : "hidden"}`}
-                  >
+                  <ul className={`menu ${isNavVisible ? "visible" : "hidden"}`}>
                     {menuItems.map((item, index) => (
                       <li key={index}>
                         <Link href={item.path}>{item.name}</Link>
@@ -156,6 +160,47 @@ const Navbar = () => {
                         )}
                       </li>
                     ))}
+                    {/* Language Chnager */}
+                    <li className="language-selector">
+                      <Dropdown>
+                        <Dropdown.Toggle variant="link" id="dropdown-basic">
+                          <FaGlobe className="language-icon" />
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                          <Dropdown.Item
+                          // onClick={() => handleLanguageChange("en")}
+                          >
+                            <img
+                              src="/assets/images/flag_england.png"
+                              alt="English"
+                              style={{ width: "20px", marginRight: "8px" }}
+                            />{" "}
+                            English
+                          </Dropdown.Item>
+                          <Dropdown.Item
+                          // onClick={() => handleLanguageChange("ar")}
+                          >
+                            <img
+                              src="/assets/images/united-arab-emirates.png"
+                              alt="Arabic"
+                              style={{ width: "20px", marginRight: "8px" }}
+                            />{" "}
+                            Arabic
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </li>
+
+                    {/* Menu icon for desktop */}
+                    <li
+                      className="d-none d-lg-inline-block desktop-menu-icon"
+                      onClick={handleShow}
+                    >
+                      <span>
+                        <GiHamburgerMenu style={{ cursor: "pointer" }} />
+                      </span>
+                    </li>
                   </ul>
                 </nav>
               </div>
@@ -163,6 +208,66 @@ const Navbar = () => {
           </div>
         </div>
       </header>
+
+      {/* OffCanvas */}
+      <Offcanvas
+        show={show}
+        onHide={handleClose}
+        placement="start"
+        className="offcanvas-background offcanvas-custom-width"
+      >
+        <Offcanvas.Body>
+          <div className="offcanvas-bg">
+            <div className="bg-overlay gradient-4" />
+
+            <button
+              className="custom-close-btn"
+              onClick={handleClose}
+              aria-label="Close"
+            >
+              &times;
+            </button>
+
+            {/* Relative: mandatory class */}
+            <div className="relative">
+              <div className="br-bottom mt0 mb40" />
+              <div className="vertical-menu">
+                <div className="panel-group" id="toggle">
+                  <div className="panel ">
+                    {menuItems.map((item, index) => (
+                      <li  className="panel-title" key={index}>
+                        <Link href={item.path}>{item.name}</Link>
+                        {item.submenu && (
+                          <ul className="submenu">
+                            {item.submenu.map((subItem, subIndex) => (
+                              <li key={subIndex}>
+                                <Link href={subItem.path}>{subItem.name}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="br-bottom mt50 mb50" />
+              <div className="">
+                <ul className="social-icon social-light">
+                  {socialLinks.map((link, index) => (
+                    <li key={index}>
+                      <a href={link.url}>
+                        <div className="icon">{link.icon}</div>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Offcanvas.Body>
+      </Offcanvas>
+      {/* OffCanvas */}
     </div>
   );
 };

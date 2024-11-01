@@ -6,20 +6,20 @@ import React from "react";
 const services = [
   {
     id: 1,
-    image: "/assets/images/demo/service1.jpg",
+    image: "/assets/images/demo/minah-image.webp",
     title: "Mina",
     details: `Mina, the "Tent City" in Makkah, Saudi Arabia, hosts over 100,000 air-conditioned tents, providing vital shelter for Hajj pilgrims. Located near Jamarat, Mina is key to the symbolic stoning ritual. Its proximity makes it an essential part of the Hajj experience, offering comfort and convenience for pilgrims.`,
   },
   {
     id: 2,
-    image: "/assets/images/demo/service4.jpg",
+    image: "/assets/images/demo/arafat-image.webp",
     title: "Arafat",
     details: `Mount Arafat, or Jabal al-Rahmah, is 20 km from Mecca and holds deep Islamic significance. Here, Prophet Muhammad (PBUH) delivered his farewell sermon. Annually, millions gather during Hajj for prayer and reflection, symbolizing unity and humility among Muslims worldwide, seeking forgiveness and blessings.
 `,
   },
   {
     id: 3,
-    image: "/assets/images/demo/service5.jpg",
+    image: "/assets/images/demo/muzdalif-image.webp",
     title: "Muzdalifah",
     description: "Fully Customizable",
     details: `Muzdalifah is a significant location during Hajj, where pilgrims gather after sunset in a serene open plain. The journey includes performing Maghrib and Isha prayers, collecting pebbles for the stoning ritual, and spending the night under the stars at Mash'ar al-Haram.`,
