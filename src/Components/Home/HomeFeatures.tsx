@@ -9,21 +9,21 @@ const HomeFeatures = () => {
       icon: "/assets/images/demo/journey-icon.svg",
       title: "The Journey",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim temporibus quae, aliquid!",
+        "A sacred path to faith, unity, and recognition, with us experiencing Hajj like never before to make it the most memorable pilgrim.",
     },
     {
       id: 2,
       icon: "/assets/images/demo/hajj-guide.png",
       title: "Hajj Guide",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim temporibus quae, aliquid!",
+        "A complete guidance for customers to make them better understand about our Hajj services.So they do not have to be worried.",
     },
     {
       id: 3,
       icon: "/assets/images/demo/faqs.png",
       title: "Faq's",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim temporibus quae, aliquid!",
+        "Here are some of the questions which will guide you in better understanding, and answer all of your remaining queries with effectiveness.",
     },
   ];
 
