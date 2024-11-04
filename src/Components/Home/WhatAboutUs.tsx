@@ -1,5 +1,4 @@
 import React from "react";
-import { FaRegHeart } from "react-icons/fa";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 function WhatAboutUs() {
