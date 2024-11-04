@@ -29,10 +29,10 @@ function AboutUsHome() {
 
   return (
     <div>
-      <div className="simple-hr mt0"></div>
+     
 
       <div className="container container-area">
-        <div className="row">
+        {/* <div className="row">
           <div className="col-sm-12">
             <section
               className="section-intro bg-img about-page-image stellar"
@@ -57,7 +57,7 @@ function AboutUsHome() {
               </div>
             </section>
           </div>
-        </div>
+        </div> */}
 
         {/* Row for Tabs */}
         <div className="row mt-5">

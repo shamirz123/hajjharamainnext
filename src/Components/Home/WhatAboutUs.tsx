@@ -1,4 +1,6 @@
 import React from "react";
+import { FaRegHeart } from "react-icons/fa";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 function WhatAboutUs() {
   return (
@@ -10,6 +12,37 @@ function WhatAboutUs() {
           </div>
           <div className="">
             <div className="container">
+              <div className="what-about-us-content">
+                <h3 className="title-medium">Why Choose Hajjharamain?</h3>
+
+                <p className="mb50">
+                  Our packages include flights and accommodation which are close
+                  to holy sites, transportation on which anyone can rely and
+                  feel secure. In Addition to guidance we ensure peace of mind.
+                  With our local expertise in Saudi Arabia, we offer flexible
+                  options and reliable support for a comfortable journey.
+                </p>
+                <div>
+                  <div className="title-small">
+                    <div className="d-flex flex-row">
+                      <div className="fa-style5  mr10">
+                      <VscWorkspaceTrusted />
+
+                      </div>
+                      <div> Trusted Support</div>
+                    </div>
+                  </div>
+                  <p className="mb0">
+                    Our expert team of professionals remains in touch with you
+                    throughout the whole journey and offers you on-time
+                    assistance along with spiritual guidance.
+                  </p>
+                  <div className="mb40" />
+                </div>
+               
+              </div>
+            </div>
+            {/* <div className="container">
               <div className="get-height">
                 <h3 className="title-medium">Why Choose Hajjharamain?</h3>
                 <div className="br-bottom mb20"></div>
@@ -39,7 +72,7 @@ function WhatAboutUs() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

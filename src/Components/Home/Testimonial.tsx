@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useRef } from "react";
 import Carousel from "react-bootstrap/Carousel";
@@ -32,7 +31,10 @@ const Testimonials = () => {
   ];
 
   const handleSelect = (selectedIndex: number) => {
-    setIndex(selectedIndex);
+    // Only allow selection if we haven't reached the last testimonial
+    if (selectedIndex < testimonials.length) {
+      setIndex(selectedIndex);
+    }
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -44,11 +46,13 @@ const Testimonials = () => {
     if (!isDragging) return;
     const diffX = e.clientX - startX;
 
-    if (diffX > 50) {
-      handleSelect((index + testimonials.length - 1) % testimonials.length); // Slide to the previous item
+    if (diffX > 50 && index > 0) {
+      // Slide to the previous item only if we are not at the first item
+      handleSelect(index - 1);
       setStartX(e.clientX);
-    } else if (diffX < -50) {
-      handleSelect((index + 1) % testimonials.length); // Slide to the next item
+    } else if (diffX < -50 && index < testimonials.length - 1) {
+      // Slide to the next item only if we are not at the last item
+      handleSelect(index + 1);
       setStartX(e.clientX);
     }
   };
@@ -61,7 +65,7 @@ const Testimonials = () => {
     <section className="section">
       <div className="container">
         <div className="row">
-          <div className="col-10 mx-auto">
+          <div className="col-10 mx-auto testimonials-wrapper">
             <div
               className="section-testimonials text-center"
               onMouseDown={handleMouseDown}
@@ -75,7 +79,6 @@ const Testimonials = () => {
                 onSelect={handleSelect}
                 controls={false} // Hide default controls
                 indicators={false} // Hide indicators
-                
               >
                 {testimonials.map((testimonial) => (
                   <Carousel.Item key={testimonial.id}>

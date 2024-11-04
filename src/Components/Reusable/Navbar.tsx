@@ -6,16 +6,18 @@ import {
   FaFacebookF,
   FaGooglePlusG,
   FaLinkedinIn,
-  
-  FaGlobe,
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosCall } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import { RiPinterestFill } from "react-icons/ri";
-import Image from "next/image";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Dropdown } from "react-bootstrap";
+
+interface Language {
+  code: string;
+  name: string;
+  flag: string;
+}
 
 const socialLinks = [
   { icon: <FaTwitter />, url: "#" },
@@ -28,7 +30,7 @@ const socialLinks = [
 const menuItems = [
   { name: "Home", path: "/" },
   { name: "Packages", path: "/packages" },
-  { name: "Serviced Countries", path: "/serviced-countries" },
+  { name: "Countries", path: "/serviced-countries" },
   { name: "Apply Now", path: "/apply-now" },
   {
     name: "About Us",
@@ -42,11 +44,25 @@ const menuItems = [
   { name: "Contact Us", path: "/contactus" },
 ];
 
+const languageOptions: Language[] = [
+  {
+    code: "en",
+    name: "English",
+    flag: "/assets/images/flag_england.png",
+  },
+  {
+    code: "ar",
+    name: "Arabic",
+    flag: "/assets/images/saudi-arabia.png",
+  },
+];
+
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
   const [show, setShow] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(languageOptions[0]); // Default to English
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -70,6 +86,9 @@ const Navbar = () => {
       setIsNavVisible(false);
     }
   };
+  const handleLanguageChange = (language: Language) => {
+    setSelectedLanguage(language);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -81,193 +100,227 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div
-      className={`header-transparent menu-fixed-dark menu-dark-mobiles menu-dark ${
-        isScrolled ? "scrolled" : ""
-      }`}
-    >
-      <div className={`topbar d-none d-lg-block ${isScrolled ? "hidden" : ""}`}>
-        <div className="main-header">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-9">
-                <div className="d-flex flex-row text-2">
-                  <div className="p-2">
-                    <IoLocation className="icon mr-1" />
-                    <span className="mb-0">Los Angeles 2200 Avenue</span>
-                  </div>
-                  <div className="p-2">
-                    <IoIosCall className="icon" />
-                    <span className="mb-0">0 555 255 444</span>
+    <>
+      <div className="header-transparent menu-fixed-dark menu-dark-mobiles menu-dark">
+        <div className="topbar topbar-transparent topbar-border-bottom hidden-xs d-none d-lg-block">
+          <div className="main-header">
+            <div className="container">
+              <div className="row">
+                <div className="col-sm-7">
+                  <div className="d-flex flex-row text-2">
+                    <div className="">
+                      <IoLocation className="icon" />
+                      <span className="mb-0">Los Angeles 2200 Avenue</span>
+                    </div>
+                    <div className="call-icon">
+                      <IoIosCall className="icon" />
+                      <span className="mb-0">0 555 255 444</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-sm-3">
-                <ul className="social-icon social-light">
-                  {socialLinks.map((link, index) => (
-                    <li key={index}>
-                      <a href={link.url}>
-                        <div className="icon">{link.icon}</div>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                <div className="col-sm-5">
+                  <div
+                    className="clearfix"
+                    style={{
+                      marginRight: "14px",
+                    }}
+                  >
+                    <div className="pull-right">
+                      <div className="clearfix">
+                        <ul className="social-icon social-light">
+                          {socialLinks.map((link, index) => (
+                            <li key={index}>
+                              <a href={link.url}>
+                                <div className="icon">{link.icon}</div>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <header
+          className={`header-wrapper ${isScrolled ? "sticky" : ""} ${
+            fadeOut ? "fade-out" : ""
+          }`}
+        >
+          <div className="main-header">
+            <div className="container">
+              <div className="row">
+                <div className="col-sm-12">
+                  <div className="menu-wrapper">
+                    <div className="main-navbar">
+                      <div className="logo-wrapper">
+                        <a href="index.html" className="logo">
+                        
+                          <img
+                            src="/assets/images/website-logo.svg"
+                            className="logo-img logo-light"
+                            alt="Logo"
+                          />
+                        </a>
+                      </div>
 
-      <header
-        className={`header-wrapper ${isScrolled ? "sticky" : ""} ${
-          fadeOut ? "fade-out" : ""
-        }`}
-      >
-        <div className="">
-          <div className="container">
-            <div className="d-flex justify-content-between align-items-center primary-navbar">
-              <div className="logo-wrapper">
-                <Link href="/">
-                  <Image
-                    src="/assets/images/website-logo.svg"
-                    alt="Website logo"
-                    width={100}
-                    height={100}
-                  />
-                </Link>
-              </div>
-              <div className="">
-                <div
-                  className="hamburger d-block d-lg-none"
-                  onClick={toggleNav}
-                >
-                  <GiHamburgerMenu />
+                      <div className="">
+                        <div
+                          className="hamburger d-block d-lg-none"
+                          onClick={toggleNav}
+                        >
+                          <GiHamburgerMenu />
+                        </div>
+                      </div>
+                      <nav className="navbar-right">
+                        <ul
+                          className={`menu ${
+                            isNavVisible ? "visible" : "hidden"
+                          }`}
+                        >
+                          {/* Toggle Menu - For Mobile Devices */}
+                          <li className="toggle-menu">
+                            {" "}
+                            <i className="icon icon_menu" />
+                          </li>
+                          {menuItems.map((item, index) => (
+                            <li key={index}>
+                              <Link href={item.path}>{item.name}</Link>
+                              {item.submenu && (
+                                <ul className="submenu">
+                                  {item.submenu.map((subItem, subIndex) => (
+                                    <li key={subIndex}>
+                                      <Link href={subItem.path}>
+                                        {subItem.name}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </li>
+                          ))}
+
+                          <li className="li-icon li-language">
+                            <a href="#">
+                              <img
+                                src={selectedLanguage.flag}
+                                alt={selectedLanguage.name}
+                                width={16}
+                                height={16}
+                                className="img-language"
+                              />
+                              <span className="li-visible-mobile">
+                                Language
+                              </span>
+                            </a>
+                            <ul className="submenu menu-languages right">
+                              {languageOptions.map((language) => (
+                                <li key={language.code}>
+                                  <a
+                                    href="#"
+                                    onClick={() =>
+                                      handleLanguageChange(language)
+                                    }
+                                  >
+                                    <img
+                                      src={language.flag}
+                                      alt={language.name}
+                                      width={16}
+                                      height={16}
+                                      className="img-language"
+                                    />
+                                    {language.name}
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                          </li>
+
+                          <li className="d-none d-lg-inline-block desktop-menu-icon">
+                            <Link href="#">
+                              <GiHamburgerMenu
+                                onClick={handleShow}
+                                className="menu-icon"
+                                style={{ cursor: "pointer" }}
+                              />
+                            </Link>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
                 </div>
-                <nav className="navbar-right">
-                  <ul className={`menu ${isNavVisible ? "visible" : "hidden"}`}>
-                    {menuItems.map((item, index) => (
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* OffCanvas */}
+        <Offcanvas
+          show={show}
+          onHide={handleClose}
+          placement="start"
+          className="offcanvas-background offcanvas-custom-width"
+        >
+          <Offcanvas.Body>
+            <div className="offcanvas-bg">
+              <div className="bg-overlay gradient-4" />
+
+              <button
+                className="custom-close-btn"
+                onClick={handleClose}
+                aria-label="Close"
+              >
+                &times;
+              </button>
+
+              {/* Relative: mandatory class */}
+              <div className="relative">
+                <div className="br-bottom mt0 mb40" />
+                <div className="vertical-menu">
+                  <div className="panel-group" id="toggle">
+                    <div className="panel ">
+                      {menuItems.map((item, index) => (
+                        <li className="panel-title" key={index}>
+                          <Link href={item.path}>{item.name}</Link>
+                          {item.submenu && (
+                            <ul className="submenu">
+                              {item.submenu.map((subItem, subIndex) => (
+                                <li key={subIndex}>
+                                  <Link href={subItem.path}>
+                                    {subItem.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="br-bottom mt50 mb50" />
+                <div className="">
+                  <ul className="social-icon social-light">
+                    {socialLinks.map((link, index) => (
                       <li key={index}>
-                        <Link href={item.path}>{item.name}</Link>
-                        {item.submenu && (
-                          <ul className="submenu">
-                            {item.submenu.map((subItem, subIndex) => (
-                              <li key={subIndex}>
-                                <Link href={subItem.path}>{subItem.name}</Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+                        <a href={link.url}>
+                          <div className="icon">{link.icon}</div>
+                        </a>
                       </li>
                     ))}
-                    {/* Language Chnager */}
-                    <li className="language-selector">
-                      <Dropdown>
-                        <Dropdown.Toggle variant="link" id="dropdown-basic">
-                          <FaGlobe className="language-icon" />
-                        </Dropdown.Toggle>
-
-                        <Dropdown.Menu>
-                          <Dropdown.Item
-                          // onClick={() => handleLanguageChange("en")}
-                          >
-                            <img
-                              src="/assets/images/flag_england.png"
-                              alt="English"
-                              style={{ width: "20px", marginRight: "8px" }}
-                            />{" "}
-                            English
-                          </Dropdown.Item>
-                          <Dropdown.Item
-                          // onClick={() => handleLanguageChange("ar")}
-                          >
-                            <img
-                              src="/assets/images/united-arab-emirates.png"
-                              alt="Arabic"
-                              style={{ width: "20px", marginRight: "8px" }}
-                            />{" "}
-                            Arabic
-                          </Dropdown.Item>
-                        </Dropdown.Menu>
-                      </Dropdown>
-                    </li>
-
-                    {/* Menu icon for desktop */}
-                    <li
-                      className="d-none d-lg-inline-block desktop-menu-icon"
-                      onClick={handleShow}
-                    >
-                      <span>
-                        <GiHamburgerMenu style={{ cursor: "pointer" }} />
-                      </span>
-                    </li>
                   </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* OffCanvas */}
-      <Offcanvas
-        show={show}
-        onHide={handleClose}
-        placement="start"
-        className="offcanvas-background offcanvas-custom-width"
-      >
-        <Offcanvas.Body>
-          <div className="offcanvas-bg">
-            <div className="bg-overlay gradient-4" />
-
-            <button
-              className="custom-close-btn"
-              onClick={handleClose}
-              aria-label="Close"
-            >
-              &times;
-            </button>
-
-            {/* Relative: mandatory class */}
-            <div className="relative">
-              <div className="br-bottom mt0 mb40" />
-              <div className="vertical-menu">
-                <div className="panel-group" id="toggle">
-                  <div className="panel ">
-                    {menuItems.map((item, index) => (
-                      <li  className="panel-title" key={index}>
-                        <Link href={item.path}>{item.name}</Link>
-                        {item.submenu && (
-                          <ul className="submenu">
-                            {item.submenu.map((subItem, subIndex) => (
-                              <li key={subIndex}>
-                                <Link href={subItem.path}>{subItem.name}</Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
-                  </div>
                 </div>
               </div>
-              <div className="br-bottom mt50 mb50" />
-              <div className="">
-                <ul className="social-icon social-light">
-                  {socialLinks.map((link, index) => (
-                    <li key={index}>
-                      <a href={link.url}>
-                        <div className="icon">{link.icon}</div>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
-          </div>
-        </Offcanvas.Body>
-      </Offcanvas>
-      {/* OffCanvas */}
-    </div>
+          </Offcanvas.Body>
+        </Offcanvas>
+        {/* OffCanvas */}
+      </div>
+    </>
+    
   );
 };
 
