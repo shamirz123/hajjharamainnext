@@ -6116,7 +6116,7 @@ body {
 
 
 a {
-    color: rgb(252, 200, 19);
+    /* color: rgb(252, 200, 19); */
     text-decoration: none;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
@@ -7303,12 +7303,6 @@ button:active {
 
 
 /* Submenu and Megamenu */
-
-
-
-
-
-
 .submenu,
 .submenu .submenu {
     list-style: none;
@@ -7317,9 +7311,9 @@ button:active {
     min-width: 180px;
 }
 
-.submenu {
+/* .submenu {
     top: 86px;
-}
+} */
 
 .submenu .submenu {
     left: 180px;
@@ -13048,9 +13042,9 @@ button.mfp-arrow {
 
 
 /* Submenu and Megamenu */
-.submenu,
-.megamenu {
-    position: absolute;
+/* Submenu and Megamenu */
+.submenu{
+    position: absolute; /* Keep this for positioning */
     background-color: rgba(41, 44, 49, 0.97);
     font-family: "Montserrat", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -13061,17 +13055,55 @@ button.mfp-arrow {
     font-size: 8.5px;
     z-index: 999999;
     display: none;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
 }
-
-/* Megamenu */
 .megamenu {
+    position: fixed; /* Keep this for positioning */
+    background-color: rgba(41, 44, 49, 0.97);
+    font-family: "Montserrat", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #c8cace;
+    font-weight: 400;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    font-size: 8.5px;
+    z-index: 999999;
+    display: none;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
     min-width: 25%;
-    width: 100%;
-    left: 0;
-    top: 86px;
+    width: 70.5%; 
+    left: 234px;
+    top: 80px;
     padding: 25px 15px 5px;
+    max-height: 500px; 
+    overflow-y: auto; 
+    
 }
 
+.inner-banner-top  .megamenu {
+    border-top: 4px solid rgb(252, 200, 19);
+    background-color: #f3f3f3;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    top: inherit;
+}
+.inner-banner-top .megamenu .title {
+    color: #606269;
+
+}
+.inner-banner-top .megamenu .span {
+    color: #606269;
+
+}
+
+
+.menu > li:hover .megamenu {
+    display: block;
+    opacity: 1 !important; 
+}
+
+/* Submenu adjustments */
 .submenu,
 .megamenu {
     text-transform: capitalize;
@@ -14060,7 +14092,11 @@ button.mfp-arrow {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-    height: 83px;
+    /* height: 83px; */
+}
+.header-wrapper.sticky .shrink{
+
+    height: 70px;
 }
 
 
@@ -14204,16 +14240,17 @@ button.mfp-arrow {
 
 .main-navbar {
     height: 90px;
-    /* Normal height */
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: height 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    /* Added box-shadow transition */
     background-color: transparent;
-    /* Initial background color */
 }
 
+.navbarShrink .main-navbar {
+    height: 76px;
+
+}
 
 .inner-banner-top .main-navbar.shrink {
     height: 76px;
@@ -15462,6 +15499,10 @@ button.mfp-arrow {
 
 @media (max-width: 768px) {
 
+    .inner-banner-top .megamenu .span {
+        color: #606269 !important;
+    }    
+
     .section-testimonials {
         height: 100%;
     }
@@ -15481,7 +15522,7 @@ button.mfp-arrow {
     }
 
     .inner-banner-top .menu li a {
-        color: #fff !important;
+        color: #fff;
     }
 
     .slider-below-floating-topbar-header {
@@ -16487,3 +16528,6 @@ button.mfp-arrow {
 }
 
 /* *********************  Responsive Mobile And Tablet Css  ********************* */
+
+
+
