@@ -12,6 +12,7 @@ import { IoIosCall } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import { RiPinterestFill } from "react-icons/ri";
 import { Drawer, IconButton } from "@mui/material";
+import Image from "next/image";
 
 interface Breadcrumbs {
   name: string;
@@ -242,10 +243,12 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                     >
                       <div className="logo-wrapper">
                         <Link href="/" className="logo">
-                          <img
+                          <Image
                             src="/assets/images/secondary-logo.svg"
                             className="logo-img logo-light"
                             alt="Logo"
+                            width={300}
+                            height={100}
                           />
                         </Link>
                       </div>
@@ -324,7 +327,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                           ))}
                           <li className="li-icon li-language">
                             <a href="#">
-                              <img
+                              <Image
                                 src={selectedLanguage.flag}
                                 alt={selectedLanguage.name}
                                 width={16}
@@ -344,7 +347,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                                       handleLanguageChange(language)
                                     }
                                   >
-                                    <img
+                                    <Image
                                       src={language.flag}
                                       alt={language.name}
                                       width={16}
