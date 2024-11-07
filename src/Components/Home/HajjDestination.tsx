@@ -36,10 +36,10 @@ const HajjDestinations = () => {
               <div className="box-services-6">
                 <Image
                   src={service.image}
-                  className="br2"
                   alt={`Image Service ${service.title}`}
-                  width={500}
-                  height={200}
+                  width={500} // Set to actual width of the image file
+                  height={200} // Set to actual height of the image file
+                  className="br2 responsive-image"
                 />
                 <h3 className="title-uppercased mb0">{service.title}</h3>
                 <div className="br-bottom mb30"></div>

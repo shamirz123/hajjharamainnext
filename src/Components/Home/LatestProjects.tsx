@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Modal from "react-bootstrap/Modal";
 import YouTube from "react-youtube";
@@ -8,7 +8,7 @@ const LatestProjects = () => {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [videoId, setVideoId] = useState("");
-  const carouselRef = useRef(null);
+  // const carouselRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
 
@@ -89,7 +89,7 @@ const LatestProjects = () => {
               onMouseMove={handleMouseMove}
               onMouseUp={handleMouseUp}
               onMouseLeave={() => setIsDragging(false)}
-              ref={carouselRef}
+              // ref={carouselRef}
             >
               <Carousel
                 activeIndex={index}

@@ -1,14 +1,8 @@
-'use client'
+"use client";
 import React from "react";
 import { IoLocation, IoMail, IoCall } from "react-icons/io5"; // Importing relevant icons
-import {
-  FaTwitter,
-  FaFacebookF,
-  FaGooglePlusG,
-  FaPinterestP,
-  FaInstagram,
-  FaDribbble,
-} from "react-icons/fa"; // Importing social media icons
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa"; // Importing social media icons
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -54,35 +48,35 @@ const Footer = () => {
               <div className="">
                 <ul className="footer-social">
                   <li>
-                    <a href="#">
-                      <FaTwitter className="icon social_twitter" />
-                    </a>
+                    <Link href="https://www.tiktok.com/@hajjharamain">
+                      <FaTiktok className="icon social_twitter" />
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">
+                    <Link href="https://www.facebook.com/hajjharamain">
                       <FaFacebookF className="icon social_facebook" />
-                    </a>
+                    </Link>
                   </li>
-                  <li>
-                    <a href="#">
+                  {/* <li>
+                    <Link href="#">
                       <FaGooglePlusG className="icon social_googleplus" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
+                    </Link>
+                  </li> */}
+                  {/* <li>
+                    <Link href="#">
                       <FaPinterestP className="icon social_pinterest" />
-                    </a>
-                  </li>
+                    </Link>
+                  </li> */}
                   <li>
-                    <a href="#">
+                    <Link href="https://www.instagram.com/hajjharamain">
                       <FaInstagram className="icon social_instagram" />
-                    </a>
+                    </Link>
                   </li>
-                  <li>
-                    <a href="#">
+                  {/* <li>
+                    <Link href="#">
                       <FaDribbble className="icon social_dribbble" />
-                    </a>
-                  </li>
+                    </Link>
+                  </li> */}
                 </ul>
               </div>
               <div className="mb40"></div>
@@ -122,7 +116,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-       
       </div>
     </div>
   );

@@ -11,11 +11,16 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosCall } from "react-icons/io";
 import { IoLocation } from "react-icons/io5";
 import { RiPinterestFill } from "react-icons/ri";
-import Offcanvas from "react-bootstrap/Offcanvas";
+import { Drawer, IconButton } from "@mui/material";
+
+interface Breadcrumbs {
+  name: string;
+  path: string;
+}
 
 interface SecondaryNavbarProps {
   heading: string;
-  breadcrumbs: string[]; // Add breadcrumbs here
+  breadcrumbs: Breadcrumbs[]; // Add breadcrumbs here
 }
 
 interface Language {
@@ -35,7 +40,60 @@ const socialLinks = [
 const menuItems = [
   { name: "Home", path: "/" },
   { name: "Packages", path: "/packages" },
-  { name: "Serviced Countries", path: "/serviced-countries" },
+  {
+    name: "Countries",
+    path: "/serviced-countries",
+    megamenu: [
+      {
+        title: "Slider Home",
+        links: [
+          { name: "Full width Slider", path: "index.html" },
+          { name: "Full screen Slider", path: "index_03.html" },
+          { name: "Video Intro", path: "index_05.html" },
+          { name: "Kenburns Slider", path: "index_06.html" },
+          { name: "Parallax Slider", path: "index_10.html" },
+          { name: "Boxed Slider", path: "index_07.html" },
+          { name: "More examples", path: "_sliders.html", badge: "+" },
+          { name: "Coming Soon", path: "page_coming_soon.html" },
+        ],
+      },
+      {
+        title: "Parallax Home",
+        links: [
+          { name: "Full width Parallax Image", path: "index_04.html" },
+          { name: "Full screen Parallax Image", path: "index_12.html" },
+          { name: "Vertical Menu Boxed", path: "index_02.html" },
+          { name: "Fixed Vertical Menu", path: "index_09.html" },
+          { name: "Push vertical Menu", path: "index_06.html" },
+          { name: "More examples", path: "_menus.html", badge: "+" },
+        ],
+      },
+      {
+        title: "Header Home",
+        links: [
+          { name: "Floating Header", path: "index_05.html" },
+          { name: "Floating top bar Header", path: "index.html" },
+          { name: "Transparent Header", path: "index_03.html" },
+          { name: "Full width Header", path: "index_10.html" },
+          { name: "Top bar Header", path: "index_08.html" },
+          { name: "Bottom Header", path: "index_12.html" },
+          { name: "Simple Header", path: "index_07.html" },
+          { name: "More examples", path: "_headers.html", badge: "+" },
+        ],
+      },
+      {
+        title: "Boxed Home",
+        links: [
+          { name: "Large Boxed Content", path: "index_13.html" },
+          { name: "Boxed Content", path: "index_11.html" },
+          { name: "Onepage Full width Slider", path: "onepage.html" },
+          { name: "Onepage Full Screen Slider", path: "onepage_02.html" },
+          { name: "Onepage Parallax Image", path: "onepage_03.html" },
+          { name: "Onepage Fixed Vertical Menu", path: "onepage_04.html" },
+        ],
+      },
+    ],
+  },
   { name: "Apply Now", path: "/apply-now" },
   {
     name: "About Us",
@@ -70,22 +128,33 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(languageOptions[0]); // Default to English
-  const [show, setShow] = useState(false);
+  const [showDrawer, setShowDrawer] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleToggleDrawer = () => {
+    setShowDrawer(!showDrawer);
+  };
 
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible); // Toggle the visibility
   };
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-      setFadeOut(false);
-    } else {
-      setIsScrolled(false);
-      setFadeOut(true);
+    const navLinks = document.querySelectorAll(".menu > li > a");
+    const mainNavbar = document.querySelector(".main-navbar");
+
+    if (mainNavbar) {
+      // Check if mainNavbar is not null
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+        setFadeOut(false);
+        mainNavbar.classList.add("shrink");
+        navLinks.forEach((link) => link.classList.add("shrink"));
+      } else {
+        setIsScrolled(false);
+        setFadeOut(true);
+        mainNavbar.classList.remove("shrink");
+        navLinks.forEach((link) => link.classList.remove("shrink"));
+      }
     }
   };
 
@@ -98,10 +167,11 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
   const handleLanguageChange = (language: Language) => {
     setSelectedLanguage(language);
   };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("resize", handleResize);
+    }
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
@@ -109,7 +179,11 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
   }, []);
 
   return (
-    <div className={`inner-Banner-wrapper ${isScrolled ? "scrolled" : ""} `}>
+    <div
+      className={`inner-Banner-wrapper header-floating   ${
+        isScrolled ? "scrolled" : ""
+      } `}
+    >
       <div className="container">
         <div className="bg-overlay gradient-1"></div>
         <div
@@ -136,20 +210,16 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                     style={{
                       marginRight: "14px",
                     }}
-                  >
-                    <div className="pull-right">
-                      <div className="clearfix">
-                        <ul className="social-icon social-light">
-                          {socialLinks.map((link, index) => (
-                            <li key={index}>
-                              <a href={link.url}>
-                                <div className="icon">{link.icon}</div>
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+                  ></div>
+
+                  <div className="pull-right xs-pull-left">
+                    <a href="#" className="btn-e btn-small">
+                      purchase
+                    </a>
+                    <span className="mr20"></span>
+                    <a href="#" className="btn-bg rounded btn-small">
+                      sign up
+                    </a>
                   </div>
                 </div>
               </div>
@@ -167,24 +237,26 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
               <div className="row">
                 <div className="col-sm-12">
                   <div className="menu-wrapper">
-                    <div className="main-navbar">
+                    <div
+                      className={`main-navbar ${isScrolled ? "shrink" : ""}`}
+                    >
                       <div className="logo-wrapper">
-                        <a href="index.html" className="logo">
+                        <Link href="/" className="logo">
                           <img
-                            src="/assets/images/website-logo.svg"
+                            src="/assets/images/secondary-logo.svg"
                             className="logo-img logo-light"
                             alt="Logo"
                           />
-                        </a>
+                        </Link>
                       </div>
 
                       <div className="">
-                        <div
+                        <IconButton
                           className="hamburger d-block d-lg-none"
                           onClick={toggleNav}
                         >
                           <GiHamburgerMenu />
-                        </div>
+                        </IconButton>
                       </div>
                       <nav className="navbar-right">
                         <ul
@@ -197,9 +269,46 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                             {" "}
                             <i className="icon icon_menu" />
                           </li>
+
                           {menuItems.map((item, index) => (
-                            <li key={index}>
+                            <li
+                              key={index}
+                              className={
+                                item.megamenu
+                                  ? "has-megamenu"
+                                  : item.submenu
+                                  ? "has-submenu"
+                                  : ""
+                              }
+                            >
                               <Link href={item.path}>{item.name}</Link>
+                              {/* Render Megamenu if present */}
+
+                              {/* {item.megamenu && (
+                                <div className="megamenu">
+                                  <div className="row">
+                                    {item.megamenu.map((section, secIndex) => (
+                                      <div className="col-3" key={secIndex}>
+                                        <ul className="megamenu-list">
+                                          <li className="title">
+                                            {section.title}
+                                          </li>
+                                          {section.links.map(
+                                            (link, linkIndex) => (
+                                              <li key={linkIndex}>
+                                                <Link href={link.path}>
+                                                  {link.name}
+                                                </Link>
+                                              </li>
+                                            )
+                                          )}
+                                        </ul>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              )} */}
+
                               {item.submenu && (
                                 <ul className="submenu">
                                   {item.submenu.map((subItem, subIndex) => (
@@ -213,7 +322,6 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                               )}
                             </li>
                           ))}
-
                           <li className="li-icon li-language">
                             <a href="#">
                               <img
@@ -251,14 +359,16 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                           </li>
 
                           <li className="d-none d-lg-inline-block desktop-menu-icon">
-                            <Link href="#">
+                            <a href="#">
                               <GiHamburgerMenu
-                                onClick={handleShow}
+                                onClick={handleToggleDrawer}
                                 className="menu-icon"
                                 style={{ cursor: "pointer" }}
                               />
-                            </Link>
+                            </a>
                           </li>
+
+                          
                         </ul>
                       </nav>
                     </div>
@@ -268,6 +378,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
             </div>
           </div>
         </header>
+
         <div className="inner-banner-content">
           <h1>{heading}</h1>
 
@@ -275,10 +386,10 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
             {breadcrumbs.map((crumb, index) => (
               <span key={index}>
                 <Link
-                  href="#"
+                  href={crumb.path}
                   className={index === breadcrumbs.length - 1 ? "active" : ""}
                 >
-                  {crumb}
+                  {crumb.name}
                 </Link>
                 {index < breadcrumbs.length - 1 && (
                   <span className="separator"> / </span>
@@ -289,65 +400,56 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
         </div>
       </div>
 
-      <Offcanvas
-          show={show}
-          onHide={handleClose}
-          placement="start"
-          className="offcanvas-background offcanvas-custom-width"
-        >
-          <Offcanvas.Body>
-            <div className="offcanvas-bg">
-              <div className="bg-overlay gradient-4" />
+      {/* MUI Drawer */}
+      <Drawer anchor="left" open={showDrawer} onClose={handleToggleDrawer}>
+        <div className="offcanvas-background">
+          <div className="bg-overlay gradient-4" />
+          <button
+            className="custom-close-btn"
+            onClick={handleToggleDrawer}
+            aria-label="Close"
+          >
+            ×
+          </button>
 
-              <button
-                className="custom-close-btn"
-                onClick={handleClose}
-                aria-label="Close"
-              >
-                &times;
-              </button>
-
-              {/* Relative: mandatory class */}
-              <div className="relative">
-                <div className="br-bottom mt0 mb40" />
-                <div className="vertical-menu">
-                  <div className="panel-group" id="toggle">
-                    <div className="panel ">
-                      {menuItems.map((item, index) => (
-                        <li className="panel-title" key={index}>
-                          <Link href={item.path}>{item.name}</Link>
-                          {item.submenu && (
-                            <ul className="submenu">
-                              {item.submenu.map((subItem, subIndex) => (
-                                <li key={subIndex}>
-                                  <Link href={subItem.path}>
-                                    {subItem.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </li>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="br-bottom mt50 mb50" />
-                <div className="">
-                  <ul className="social-icon social-light">
-                    {socialLinks.map((link, index) => (
-                      <li key={index}>
-                        <a href={link.url}>
-                          <div className="icon">{link.icon}</div>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+          <div className="relative">
+            <div className="br-bottom mt0 mb40" />
+            <div className="vertical-menu">
+              <div className="panel-group" id="toggle">
+                <div className="panel ">
+                  {menuItems.map((item, index) => (
+                    <li className="panel-title" key={index}>
+                      <Link href={item.path}>{item.name}</Link>
+                      {item.submenu && (
+                        <ul className="submenu">
+                          {item.submenu.map((subItem, subIndex) => (
+                            <li key={subIndex}>
+                              <Link href={subItem.path}>{subItem.name}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
                 </div>
               </div>
             </div>
-          </Offcanvas.Body>
-        </Offcanvas>
+            <div className="br-bottom mt50 mb50" />
+            <div className="">
+              <ul className="social-icon social-light">
+                {socialLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.url}>
+                      <div className="icon">{link.icon}</div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Drawer>
+      {/* MUI Drawer */}
     </div>
   );
 };

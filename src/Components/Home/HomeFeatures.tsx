@@ -41,6 +41,7 @@ const HomeFeatures = () => {
                       alt={feature?.title}
                       width={80}
                       height={60}
+                      className="responsive-image"
                     />
                   </div>
                   <h3 className="title-small">{feature.title}</h3>

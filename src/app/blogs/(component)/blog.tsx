@@ -93,21 +93,7 @@ const Blogs = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="blog-boxes">
-                <div className="icon">
-                  {blog.type === "image" ? <GrGallery /> : <GrVideo />}
-                </div>
-                <div className="pl-3">
-                  <h2 className="post-title">{blog.title}</h2>
-                  <div className="sub-post-title">
-                    <span>
-                      by <a href="#">{blog.author}</a>
-                    </span>
-                    <span className="separator"> / </span>
-                    <span>{blog.date}</span>
-                  </div>
-                </div>
-              </div> */}
+
               {blog.type === "image" ? (
                 <div className="blog-image-wrapper">
                   <figure className="blog-image">

@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiPinterestFill } from "react-icons/ri";
-import { Drawer, IconButton } from "@mui/material";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 interface Language {
   code: string;
@@ -26,65 +26,9 @@ const socialLinks = [
 ];
 
 const menuItems = [
-  {
-    name: "Home",
-    path: "/",
-  },
+  { name: "Home", path: "/" },
   { name: "Packages", path: "/packages" },
-  {
-    name: "Countries",
-    path: "/serviced-countries",
-    megamenu: [
-      {
-        title: "Slider Home",
-        links: [
-          { name: "Full width Slider", path: "index.html" },
-          { name: "Full screen Slider", path: "index_03.html" },
-          { name: "Video Intro", path: "index_05.html" },
-          { name: "Kenburns Slider", path: "index_06.html" },
-          { name: "Parallax Slider", path: "index_10.html" },
-          { name: "Boxed Slider", path: "index_07.html" },
-          { name: "More examples", path: "_sliders.html", badge: "+" },
-          { name: "Coming Soon", path: "page_coming_soon.html" },
-        ],
-      },
-      {
-        title: "Parallax Home",
-        links: [
-          { name: "Full width Parallax Image", path: "index_04.html" },
-          { name: "Full screen Parallax Image", path: "index_12.html" },
-          { name: "Vertical Menu Boxed", path: "index_02.html" },
-          { name: "Fixed Vertical Menu", path: "index_09.html" },
-          { name: "Push vertical Menu", path: "index_06.html" },
-          { name: "More examples", path: "_menus.html", badge: "+" },
-        ],
-      },
-      {
-        title: "Header Home",
-        links: [
-          { name: "Floating Header", path: "index_05.html" },
-          { name: "Floating top bar Header", path: "index.html" },
-          { name: "Transparent Header", path: "index_03.html" },
-          { name: "Full width Header", path: "index_10.html" },
-          { name: "Top bar Header", path: "index_08.html" },
-          { name: "Bottom Header", path: "index_12.html" },
-          { name: "Simple Header", path: "index_07.html" },
-          { name: "More examples", path: "_headers.html", badge: "+" },
-        ],
-      },
-      {
-        title: "Boxed Home",
-        links: [
-          { name: "Large Boxed Content", path: "index_13.html" },
-          { name: "Boxed Content", path: "index_11.html" },
-          { name: "Onepage Full width Slider", path: "onepage.html" },
-          { name: "Onepage Full Screen Slider", path: "onepage_02.html" },
-          { name: "Onepage Parallax Image", path: "onepage_03.html" },
-          { name: "Onepage Fixed Vertical Menu", path: "onepage_04.html" },
-        ],
-      },
-    ],
-  },
+  { name: "Countries", path: "/serviced-countries" },
   { name: "Apply Now", path: "/apply-now" },
   {
     name: "About Us",
@@ -115,12 +59,11 @@ const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
-  const [showDrawer, setShowDrawer] = useState(false);
+  const [show, setShow] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(languageOptions[0]); // Default to English
 
-  const handleToggleDrawer = () => {
-    setShowDrawer(!showDrawer);
-  };
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
@@ -132,6 +75,7 @@ const Navbar = () => {
 
     if (headerWrapper) {
       if (window.scrollY > 10) {
+        // Set to a small scroll distance like 10px
         setIsScrolled(true);
         setFadeOut(false);
         headerWrapper.classList.add("shrink");
@@ -150,7 +94,6 @@ const Navbar = () => {
       setIsNavVisible(false);
     }
   };
-
   const handleLanguageChange = (language: Language) => {
     setSelectedLanguage(language);
   };
@@ -170,9 +113,9 @@ const Navbar = () => {
     <>
       <div className="header-transparent menu-fixed-dark menu-dark-mobiles menu-dark primary-navbar">
         <header
-          className={`  header-wrapper ${isScrolled ? "sticky shrink" : ""} ${
+          className={`header-wrapper ${isScrolled ? "sticky shrink" : ""} ${
             fadeOut ? "fade-out" : ""
-          }  `}
+          }`}
         >
           <div className="sticky-wrapper">
             <div className="container-fullwidth">
@@ -182,11 +125,6 @@ const Navbar = () => {
                     <div className="main-navbar">
                       <div className="logo-wrapper">
                         <Link href="/" className="logo">
-                          {/* <img
-                            src="/assets/images/logo-light.png"
-                            className="logo-img logo-light"
-                            alt="Logo"
-                          /> */}
                           <img
                             src="/assets/images/primary-logo.svg"
                             className="logo-img logo-light"
@@ -196,18 +134,18 @@ const Navbar = () => {
                       </div>
 
                       <div className="">
-                        <IconButton
+                        <div
                           className="hamburger d-block d-lg-none"
                           onClick={toggleNav}
                         >
                           <GiHamburgerMenu />
-                        </IconButton>
+                        </div>
                       </div>
                       <nav className="navbar-right">
                         <ul
-                          className={` menu ${
+                          className={`menu ${
                             isNavVisible ? "visible" : "hidden"
-                          }  `}
+                          }`}
                         >
                           {/* Toggle Menu - For Mobile Devices */}
                           <li className="toggle-menu">
@@ -215,35 +153,8 @@ const Navbar = () => {
                             <i className="icon icon_menu" />
                           </li>
                           {menuItems.map((item, index) => (
-                            <li key={index}
-                            
-                            >
+                            <li key={index}>
                               <Link href={item.path}>{item.name}</Link>
-                              {/* Render Megamenu if present */}
-                              {/* {item.megamenu && (
-                                <div className="megamenu">
-                                  <div className="row">
-                                    {item.megamenu.map((section, secIndex) => (
-                                      <div className="col-3" key={secIndex}>
-                                        <ul className="megamenu-list">
-                                          <li className="title">
-                                            {section.title}
-                                          </li>
-                                          {section.links.map(
-                                            (link, linkIndex) => (
-                                              <li key={linkIndex}>
-                                                <Link href={link.path}>
-                                                  {link.name}
-                                                </Link>
-                                              </li>
-                                            )
-                                          )}
-                                        </ul>
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              )} */}
                               {item.submenu && (
                                 <ul className="submenu">
                                   {item.submenu.map((subItem, subIndex) => (
@@ -297,7 +208,7 @@ const Navbar = () => {
                           <li className="d-none d-lg-inline-block desktop-menu-icon">
                             <Link href="#">
                               <GiHamburgerMenu
-                                onClick={handleToggleDrawer}
+                                onClick={handleShow}
                                 className="menu-icon"
                                 style={{ cursor: "pointer" }}
                               />
@@ -313,56 +224,68 @@ const Navbar = () => {
           </div>
         </header>
 
-        {/* MUI Drawer */}
-        <Drawer anchor="left" open={showDrawer} onClose={handleToggleDrawer}>
-          <div className="offcanvas-background">
-            <div className="bg-overlay gradient-4" />
-            <button
-              className="custom-close-btn"
-              onClick={handleToggleDrawer}
-              aria-label="Close"
-            >
-              ×
-            </button>
+        {/* OffCanvas */}
 
-            <div className="relative">
-              <div className="br-bottom mt0 mb40" />
-              <div className="vertical-menu">
-                <div className="panel-group" id="toggle">
-                  <div className="panel ">
-                    {menuItems.map((item, index) => (
-                      <li className="panel-title" key={index}>
-                        <Link href={item.path}>{item.name}</Link>
-                        {item.submenu && (
-                          <ul className="submenu">
-                            {item.submenu.map((subItem, subIndex) => (
-                              <li key={subIndex}>
-                                <Link href={subItem.path}>{subItem.name}</Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
+        <Offcanvas
+          show={show}
+          onHide={handleClose}
+          placement="start"
+          className="offcanvas-background offcanvas-custom-width"
+        >
+          <Offcanvas.Body>
+            <div className="offcanvas-bg">
+              <div className="bg-overlay gradient-4" />
+
+              <button
+                className="custom-close-btn"
+                onClick={handleClose}
+                aria-label="Close"
+              >
+                ×
+              </button>
+
+              <div className="relative">
+                <div className="br-bottom mt0 mb40" />
+                <div className="vertical-menu">
+                  <div className="panel-group" id="toggle">
+                    <div className="panel ">
+                      {menuItems.map((item, index) => (
+                        <li className="panel-title" key={index}>
+                          <Link href={item.path}>{item.name}</Link>
+                          {item.submenu && (
+                            <ul className="submenu">
+                              {item.submenu.map((subItem, subIndex) => (
+                                <li key={subIndex}>
+                                  <Link href={subItem.path}>
+                                    {subItem.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="br-bottom mt50 mb50" />
-              <div className="">
-                <ul className="social-icon social-light">
-                  {socialLinks.map((link, index) => (
-                    <li key={index}>
-                      <Link href={link.url}>
-                        <div className="icon">{link.icon}</div>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <div className="br-bottom mt50 mb50" />
+                <div className="">
+                  <ul className="social-icon social-light">
+                    {socialLinks.map((link, index) => (
+                      <li key={index}>
+                        <Link href={link.url}>
+                          <div className="icon">{link.icon}</div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </Drawer>
-        {/* MUI Drawer */}
+          </Offcanvas.Body>
+        </Offcanvas>
+
+        {/* OffCanvas */}
       </div>
     </>
   );

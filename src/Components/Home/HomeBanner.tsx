@@ -38,13 +38,12 @@ function HomeBanner() {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  // height: "100vh", 
                   width: "100%",
                 }}
               >
                 {/* Black overlay */}
                 <div className="black-overlay"></div>
-                <div className="container">
+                <div className="container p-2 p-lg-5">
                   <div className="carousel-content">
                     <div className="heading">
                       <h1>
