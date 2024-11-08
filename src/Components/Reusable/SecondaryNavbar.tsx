@@ -24,6 +24,7 @@ interface Breadcrumbs {
 
 interface SecondaryNavbarProps {
   heading: string;
+  image: string;
   breadcrumbs: Breadcrumbs[]; // Add breadcrumbs here
 }
 
@@ -241,6 +242,7 @@ const languageOptions: Language[] = [
 
 const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
   heading,
+  image,
   breadcrumbs,
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -299,6 +301,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
 
   return (
     <div
+    style={{backgroundImage: `url(${image})`}}
       className={`inner-Banner-wrapper header-floating   ${
         isScrolled ? "scrolled" : ""
       } `}

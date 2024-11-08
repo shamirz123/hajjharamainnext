@@ -3,7 +3,6 @@ import { usePathname } from "next/navigation";
 import Navbar from "./Navbar";
 import SecondaryNavbar from "./SecondaryNavbar";
 
-
 const MainNavbarCom = () => {
   const pathname = usePathname();
 
@@ -16,6 +15,7 @@ const MainNavbarCom = () => {
       content = (
         <SecondaryNavbar
           heading="Contact Us"
+          image="/assets/images/demo/banners/contact_us.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Pages", path: "/contactus" },
@@ -28,6 +28,7 @@ const MainNavbarCom = () => {
       content = (
         <SecondaryNavbar
           heading="About Us"
+          image="/assets/images/demo/banners/about_us.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Pages", path: "/about-us" },
@@ -40,6 +41,7 @@ const MainNavbarCom = () => {
       content = (
         <SecondaryNavbar
           heading="Hajj Guide"
+          image="/assets/images/demo/boxed-img.jpg"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Pages", path: "/about-us" },
@@ -52,6 +54,7 @@ const MainNavbarCom = () => {
       content = (
         <SecondaryNavbar
           heading="Journey"
+          image="/assets/images/demo/boxed-img.jpg"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Pages", path: "/about-us" },
@@ -64,6 +67,7 @@ const MainNavbarCom = () => {
       content = (
         <SecondaryNavbar
           heading="Blogs"
+          image="/assets/images/demo/banners/blogs.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Pages", path: "/blogs" },
@@ -76,6 +80,7 @@ const MainNavbarCom = () => {
       content = (
         <SecondaryNavbar
           heading="Packages"
+          image="/assets/images/demo/banners/packages.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Pages", path: "/packages" },
@@ -88,6 +93,7 @@ const MainNavbarCom = () => {
       content = (
         <SecondaryNavbar
           heading="Serviced Countries"
+          image="/assets/images/demo/banners/served_countris.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Pages", path: "/serviced-countries" },
@@ -100,6 +106,7 @@ const MainNavbarCom = () => {
       content = (
         <SecondaryNavbar
           heading="Apply Now"
+          image="/assets/images/demo/boxed-img.jpg"
           breadcrumbs={[
             { name: "Home", path: "/" },
             { name: "Pages", path: "/apply-now" },
@@ -111,6 +118,7 @@ const MainNavbarCom = () => {
     default:
       content = (
         <SecondaryNavbar
+          image="/assets/images/demo/banners/"
           heading=""
           breadcrumbs={[
             { name: "Home", path: "/" },

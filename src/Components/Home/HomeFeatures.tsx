@@ -6,7 +6,7 @@ const HomeFeatures = () => {
   const features = [
     {
       id: 1,
-      icon: "/assets/images/demo/journey-icon.svg",
+      icon: "/assets/images/demo/output.webp",
       title: "The Journey",
       description:
         "A sacred path to faith, unity, and recognition, with us experiencing Hajj like never before to make it the most memorable pilgrim.",
