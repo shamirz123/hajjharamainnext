@@ -49,7 +49,7 @@ function AboutUsTeam() {
           {teamMembers.map((member, index) => (
             <div className="col-sm-6 col-md-4 sm-box3" key={index}>
               <div className="box-services-6 small-padding">
-                <Image
+                <img
                   src={member.image}
                   className="br2"
                   alt={member.name}

@@ -62,7 +62,7 @@ const Packages = () => {
             {packages.map((pack) => (
               <div className="col-sm-6 col-md-4 xs-box3 mb-3" key={pack?.id}>
                 <div className="box-services-6">
-                  <Image
+                  <img
                     src={pack?.image}
                     className="br2 responsive-image"
                     alt={`Image Service ${pack?.title}`}

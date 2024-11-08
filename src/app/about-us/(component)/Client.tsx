@@ -9,7 +9,7 @@ function Clients() {
         <div className="col-sm-4 xs-box">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client01.png"
                 alt="client"
                 className="mb0"
@@ -22,7 +22,7 @@ function Clients() {
         <div className="col-sm-4 xs-box">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client02.png"
                 alt="client"
                 className="mb0"
@@ -35,7 +35,7 @@ function Clients() {
         <div className="col-sm-4">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client03.png"
                 alt="client"
                 className="mb0"
@@ -51,7 +51,7 @@ function Clients() {
         <div className="col-sm-4 xs-box">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client04.png"
                 alt="client"
                 className="mb0"
@@ -64,7 +64,7 @@ function Clients() {
         <div className="col-sm-4 xs-box">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client05.png"
                 alt="client"
                 className="mb0"
@@ -77,7 +77,7 @@ function Clients() {
         <div className="col-sm-4">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client06.png"
                 alt="client"
                 className="mb0"
@@ -93,7 +93,7 @@ function Clients() {
         <div className="col-sm-4 xs-box">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client07.png"
                 alt="client"
                 className="mb0"
@@ -106,7 +106,7 @@ function Clients() {
         <div className="col-sm-4 xs-box">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client08.png"
                 alt="client"
                 className="mb0"
@@ -119,7 +119,7 @@ function Clients() {
         <div className="col-sm-4">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client03.png"
                 alt="client"
                 className="mb0"
@@ -135,7 +135,7 @@ function Clients() {
         <div className="col-sm-4 xs-box">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client01.png"
                 alt="client"
                 className="mb0"
@@ -148,7 +148,7 @@ function Clients() {
         <div className="col-sm-4 xs-box">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client02.png"
                 alt="client"
                 className="mb0"
@@ -161,7 +161,7 @@ function Clients() {
         <div className="col-sm-4">
           <div className="box-services-6">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/client04.png"
                 alt="client"
                 className="mb0"

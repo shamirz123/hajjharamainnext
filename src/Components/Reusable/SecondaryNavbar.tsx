@@ -364,7 +364,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                     >
                       <div className="logo-wrapper">
                         <Link href="/" className="logo">
-                          <Image
+                          <img
                             src="/assets/images/secondary-logo.svg"
                             className="logo-img logo-light"
                             alt="Logo"
@@ -442,7 +442,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                           ))}
                           <li className="li-icon li-language">
                             <a href="#">
-                              <Image
+                              <img
                                 src={selectedLanguage.flag}
                                 alt={selectedLanguage.name}
                                 width={16}
@@ -462,7 +462,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                                       handleLanguageChange(language)
                                     }
                                   >
-                                    <Image
+                                    <img
                                       src={language.flag}
                                       alt={language.name}
                                       width={16}

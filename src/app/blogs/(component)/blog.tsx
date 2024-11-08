@@ -97,7 +97,7 @@ const Blogs = () => {
               {blog.type === "image" ? (
                 <div className="blog-image-wrapper">
                   <figure className="blog-image">
-                    <Image
+                    <img
                       src={blog.imageUrl}
                       alt={blog.title}
                       className="img-fluid"

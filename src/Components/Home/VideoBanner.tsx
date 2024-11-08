@@ -79,7 +79,7 @@ function VideoBanner() {
             {/* Thumbnails for navigation */}
             {/* <div className="thumbnail-container">
           {images.map((image, index) => (
-            <Image
+            <img
               key={index}
               src={image}
               alt={`Thumbnail ${index + 1}`}

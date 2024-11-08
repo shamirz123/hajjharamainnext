@@ -36,7 +36,7 @@ const HomeFeatures = () => {
               <div className="col-sm-6 col-md-4 xs-box" key={feature.id}>
                 <div className="box-services-2 box-services-2a">
                   <div className="icon icon-2">
-                    <Image
+                    <img
                       src={feature?.icon}
                       alt={feature?.title}
                       width={80}

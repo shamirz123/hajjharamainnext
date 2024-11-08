@@ -185,7 +185,7 @@ const AboutServices = () => {
           <div className="br-bottom mt30 mb0"></div>
         </div>
         <div className="col-sm-12 col-md-5">
-          <Image
+          <img
             src="/assets/images/demo/p01.jpg"
             className="br2"
             alt="Service Image"
@@ -216,7 +216,7 @@ const AboutServices = () => {
           <div className="br-bottom mt30"></div>
         </div>
         <div className="col-sm-12 col-md-5 col-md-pull-7">
-          <Image
+          <img
             src="/assets/images/demo/p04.jpg"
             className="br2"
             alt="Service Image"

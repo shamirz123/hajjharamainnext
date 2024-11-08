@@ -8,7 +8,7 @@ const BrandLogos = () => {
         <div className="row">
           <div className="col-sm-6 col-md-3 sm-box">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/certifiedLogo1.webp"
                 alt="client"
                 width={160}
@@ -18,7 +18,7 @@ const BrandLogos = () => {
           </div>
           <div className="col-sm-6 col-md-3 sm-box">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/certifiedLogo2.webp"
                 alt="client"
                 width={160}
@@ -28,7 +28,7 @@ const BrandLogos = () => {
           </div>
           <div className="col-sm-6 col-md-3 xs-box">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/certifiedLogo3.webp"
                 alt="client"
                 width={160}
@@ -38,7 +38,7 @@ const BrandLogos = () => {
           </div>
           <div className="col-sm-6 col-md-3">
             <a href="#">
-              <Image
+              <img
                 src="/assets/images/demo/certifiedLogo4.webp"
                 alt="client"
                 width={160}
