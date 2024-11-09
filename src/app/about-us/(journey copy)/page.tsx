@@ -129,7 +129,7 @@ function JourneySection() {
                 {journey.type === "image" ? (
                   <div className="blog-image-wrapper">
                     <figure className="blog-image">
-                      <img
+                      <Image
                         src={journey.imageUrl}
                         alt={journey.title}
                         className="img-fluid"

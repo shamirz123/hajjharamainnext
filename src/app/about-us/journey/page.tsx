@@ -1,6 +1,5 @@
 import React from "react";
-import { GrGallery, GrVideo } from "react-icons/gr";
-import { BsArrowsAngleExpand } from "react-icons/bs";
+import { GrGallery } from "react-icons/gr";
 import Image from "next/image";
 
 function JourneySection() {
@@ -121,7 +120,7 @@ function JourneySection() {
                 </div>
                 <div className="blog-image-wrapper">
                   <figure className="blog-image">
-                    <img
+                    <Image
                       src={journey.imageUrl}
                       alt={journey.title}
                       className="img-fluid"

@@ -34,7 +34,7 @@ const HajjDestinations = () => {
           {services.map((service) => (
             <div className="col-sm-6 col-md-4 xs-box3" key={service.id}>
               <div className="box-services-6">
-                <img
+                <Image
                   src={service.image}
                   alt={`Image Service ${service.title}`}
                   width={500} // Set to actual width of the image file
