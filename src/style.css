@@ -14639,6 +14639,17 @@ button.mfp-arrow {
 /* About css End */
 
 
+/* Haj Guide css  */
+.hajj-guide-wrapper {
+    margin-bottom: 40px;
+}
+
+.blog-caption p {
+    text-align: justify;
+}
+/* Haj Guide css End */
+
+
 /* Brand css  */
 .brand-logo-wrapper img {
     width: 180px;
@@ -14646,6 +14657,8 @@ button.mfp-arrow {
 }
 
 /* Brand css End */
+
+
 
 
 /* Testimonial css  */
@@ -14718,6 +14731,10 @@ button.mfp-arrow {
 /* About-Uss css End */
 
 /* Journey Page css  */
+
+.journey-images-wrapper img {
+    width: 31px;
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

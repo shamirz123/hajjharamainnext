@@ -13,9 +13,10 @@ const Footer = () => {
             <div className="footer-widget">
               <h3 className="footer-title">About us</h3>
               <p>
-                So if you have the time, and I assure you that you do, get ready
-                for a journey that is certain to, if not buy you more time to do
-                what you like.
+                At Hajjharamain, we specialize in providing seamless and
+                spiritually fulfilling Hajj packages, ensuring a memorable
+                pilgrimage experience with trusted services and dedicated
+                guidance
               </p>
               <p className="mb0">
                 <a href="#" className="read-more">

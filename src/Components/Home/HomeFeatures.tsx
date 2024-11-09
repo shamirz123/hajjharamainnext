@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HomeFeatures = () => {
@@ -8,6 +9,7 @@ const HomeFeatures = () => {
       id: 1,
       icon: "/assets/images/demo/output.webp",
       title: "The Journey",
+      link: "/about-us/journey",
       description:
         "A sacred path to faith, unity, and recognition, with us experiencing Hajj like never before to make it the most memorable pilgrim.",
     },
@@ -15,6 +17,8 @@ const HomeFeatures = () => {
       id: 2,
       icon: "/assets/images/demo/hajj-guide.png",
       title: "Hajj Guide",
+      link: "/about-us/hajjguide",
+
       description:
         "A complete guidance for customers to make them better understand about our Hajj services.So they do not have to be worried.",
     },
@@ -22,6 +26,8 @@ const HomeFeatures = () => {
       id: 3,
       icon: "/assets/images/demo/faqs.png",
       title: "Faq's",
+      link: "/about-us/faqs",
+
       description:
         "Here are some of the questions which will guide you in better understanding, and answer all of your remaining queries with effectiveness.",
     },
@@ -36,15 +42,19 @@ const HomeFeatures = () => {
               <div className="col-sm-6 col-md-4 xs-box" key={feature.id}>
                 <div className="box-services-2 box-services-2a">
                   <div className="icon icon-2">
-                    <Image
-                      src={feature?.icon}
-                      alt={feature?.title}
-                      width={80}
-                      height={60}
-                      className="responsive-image"
-                    />
+                    <Link href={feature?.link}>
+                      <Image
+                        src={feature?.icon}
+                        alt={feature?.title}
+                        width={80}
+                        height={60}
+                        className="responsive-image"
+                      />
+                    </Link>
                   </div>
-                  <h3 className="title-small">{feature.title}</h3>
+                  <Link href={feature?.link}>
+                    <h3 className="title-small">{feature.title}</h3>
+                  </Link>
                   <div className="br-bottom-center mb20"></div>
                   <p className="mb0">{feature.description}</p>
                 </div>
