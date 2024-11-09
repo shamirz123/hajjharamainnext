@@ -1,5 +1,4 @@
 import React from "react";
-import { GrGallery } from "react-icons/gr";
 import Image from "next/image";
 
 function JourneySection() {
@@ -49,7 +48,7 @@ function JourneySection() {
       id: 4,
       title: "Muzdalifah",
       imageUrl: "/assets/images/demo/journey/Muzdalifah.webp",
-      iconUrl: "/assets/images/demo/journey/Muzdalifah.webp",
+      iconUrl: "/assets/images/demo/journey/muzdalifa-icon.webp",
       description:
         "Move to Muzdalifah after sunset on the 9th of Dhul-Hijjah, where you will spend the night and gather seven pebbles for the next Jamarat ceremonies.",
     },
@@ -116,10 +115,12 @@ function JourneySection() {
                   <div className="p-2">
                     <div className="icon journey-images-wrapper">
                       {/* <GrGallery /> */}
-                      <img
+                      <Image
                         src={journey.iconUrl}
                         alt={`${journey.title} icon`}
                         className="img-fluid"
+                        width={500}
+                        height={100}
                       />
                     </div>
                   </div>
