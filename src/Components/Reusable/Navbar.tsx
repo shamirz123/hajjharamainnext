@@ -11,6 +11,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RiPinterestFill } from "react-icons/ri";
 import { Drawer, IconButton } from "@mui/material";
 import { MdLocationPin } from "react-icons/md";
+import Image from "next/image";
 
 interface Language {
   code: string;
@@ -307,10 +308,12 @@ const Navbar = () => {
                             className="logo-img logo-light"
                             alt="Logo"
                           /> */}
-                          <img
+                          <Image
                             src="/assets/images/primary-logo.svg"
                             className="logo-img logo-light"
                             alt="Logo"
+                            width={200}
+                            height={60}
                           />
                         </Link>
                       </div>
@@ -383,7 +386,7 @@ const Navbar = () => {
 
                           <li className="li-icon li-language">
                             <a href="#">
-                              <img
+                              <Image
                                 src={selectedLanguage.flag}
                                 alt={selectedLanguage.name}
                                 width={16}
@@ -403,7 +406,7 @@ const Navbar = () => {
                                       handleLanguageChange(language)
                                     }
                                   >
-                                    <img
+                                    <Image
                                       src={language.flag}
                                       alt={language.name}
                                       width={16}

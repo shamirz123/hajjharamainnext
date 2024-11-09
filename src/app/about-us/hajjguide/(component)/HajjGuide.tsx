@@ -1,31 +1,11 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
-import {
-  FaFacebookF,
-  FaFilm,
-  FaGooglePlusG,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
-import { TbArrowsDiagonal } from "react-icons/tb";
 
 function HajjGuide() {
-  // Define the active tab state
-  const [activeKey, setActiveKey] = useState("popular");
-  const [fadeClass, setFadeClass] = useState("");
-  // Define the active tab state
 
-  const handleTabChange = (k: string) => {
-    setFadeClass(""); // Reset fade class
-    setActiveKey(k); // Change tab
-    setTimeout(() => {
-      setFadeClass("fade-in");
-    }, 50); // Slight delay to ensure the class is applied after content change
-  };
+
   return (
     <>
       <div className="container container-area">
@@ -40,15 +20,14 @@ function HajjGuide() {
                 </div>
                 <div className="box-right">
                   <h2 className="post-title">Cecillia and the satellite</h2>
-                 
                 </div>
               </div>
               <figure className="blog-image blog-view">
-                <img
+                <Image
                   src="/assets/images/demo/blog01.jpg"
                   alt="blog post"
-                  width={100}
-                  height={100}
+                  width={700}
+                  height={200}
                 />
                 <div className="blog-mask">
                   {/* <a
@@ -84,22 +63,22 @@ function HajjGuide() {
             <article className="blog-item">
               <div className="clearfix">
                 <div className="box-left">
-             
                   <div className="icon">
-                      
-                      <GrGallery />
-                    </div>
+                    <GrGallery />
+                  </div>
                 </div>
                 <div className="box-right">
                   <h2 className="post-title">Sun goes down</h2>
-               
                 </div>
               </div>
               <figure className="blog-image blog-view">
-                <img src="/assets/images/demo/p01.jpg" alt="blog post" />
-                <div className="blog-mask">
-                  
-                </div>
+                <Image
+                  src="/assets/images/demo/p01.jpg"
+                  alt="blog post"
+                  width={500}
+                  height={100}
+                />
+                <div className="blog-mask"></div>
               </figure>
               <div className="blog-caption">
                 <p>
@@ -119,22 +98,22 @@ function HajjGuide() {
             <article className="blog-item">
               <div className="clearfix">
                 <div className="box-left">
-             
                   <div className="icon">
-                      
-                      <GrGallery />
-                    </div>
+                    <GrGallery />
+                  </div>
                 </div>
                 <div className="box-right">
                   <h2 className="post-title">Sun goes down</h2>
-               
                 </div>
               </div>
               <figure className="blog-image blog-view">
-                <img src="/assets/images/demo/p01.jpg" alt="blog post" />
-                <div className="blog-mask">
-                  
-                </div>
+                <Image
+                  src="/assets/images/demo/p01.jpg"
+                  alt="blog post"
+                  width={500}
+                  height={100}
+                />
+                <div className="blog-mask"></div>
               </figure>
               <div className="blog-caption">
                 <p>
@@ -154,22 +133,22 @@ function HajjGuide() {
             <article className="blog-item">
               <div className="clearfix">
                 <div className="box-left">
-             
                   <div className="icon">
-                      
-                      <GrGallery />
-                    </div>
+                    <GrGallery />
+                  </div>
                 </div>
                 <div className="box-right">
                   <h2 className="post-title">Sun goes down</h2>
-               
                 </div>
               </div>
               <figure className="blog-image blog-view">
-                <img src="/assets/images/demo/p01.jpg" alt="blog post" />
-                <div className="blog-mask">
-                  
-                </div>
+                <Image
+                  src="/assets/images/demo/p01.jpg"
+                  alt="blog post"
+                  width={500}
+                  height={100}
+                />
+                <div className="blog-mask"></div>
               </figure>
               <div className="blog-caption">
                 <p>
@@ -189,22 +168,22 @@ function HajjGuide() {
             <article className="blog-item">
               <div className="clearfix">
                 <div className="box-left">
-             
                   <div className="icon">
-                      
-                      <GrGallery />
-                    </div>
+                    <GrGallery />
+                  </div>
                 </div>
                 <div className="box-right">
                   <h2 className="post-title">Sun goes down</h2>
-               
                 </div>
               </div>
               <figure className="blog-image blog-view">
-                <img src="/assets/images/demo/p01.jpg" alt="blog post" />
-                <div className="blog-mask">
-                  
-                </div>
+                <Image
+                  src="/assets/images/demo/p01.jpg"
+                  alt="blog post"
+                  width={500}
+                  height={100}
+                />
+                <div className="blog-mask"></div>
               </figure>
               <div className="blog-caption">
                 <p>
@@ -224,22 +203,22 @@ function HajjGuide() {
             <article className="blog-item">
               <div className="clearfix">
                 <div className="box-left">
-             
                   <div className="icon">
-                      
-                      <GrGallery />
-                    </div>
+                    <GrGallery />
+                  </div>
                 </div>
                 <div className="box-right">
                   <h2 className="post-title">Sun goes down</h2>
-               
                 </div>
               </div>
               <figure className="blog-image blog-view">
-                <img src="/assets/images/demo/p01.jpg" alt="blog post" />
-                <div className="blog-mask">
-                  
-                </div>
+                <Image
+                  src="/assets/images/demo/p01.jpg"
+                  alt="blog post"
+                  width={500}
+                  height={100}
+                />
+                <div className="blog-mask"></div>
               </figure>
               <div className="blog-caption">
                 <p>
@@ -259,22 +238,22 @@ function HajjGuide() {
             <article className="blog-item">
               <div className="clearfix">
                 <div className="box-left">
-             
                   <div className="icon">
-                      
-                      <GrGallery />
-                    </div>
+                    <GrGallery />
+                  </div>
                 </div>
                 <div className="box-right">
                   <h2 className="post-title">Sun goes down</h2>
-               
                 </div>
               </div>
               <figure className="blog-image blog-view">
-                <img src="/assets/images/demo/p01.jpg" alt="blog post" />
-                <div className="blog-mask">
-                  
-                </div>
+                <Image
+                  src="/assets/images/demo/p01.jpg"
+                  alt="blog post"
+                  width={500}
+                  height={100}
+                />
+                <div className="blog-mask"></div>
               </figure>
               <div className="blog-caption">
                 <p>
