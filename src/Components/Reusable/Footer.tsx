@@ -30,15 +30,16 @@ const Footer = () => {
               <h3 className="footer-title">Get in touch</h3>
               <address className="contact-widget">
                 <p>
-                  <IoLocation className="icon icon_pin_alt" /> California, Los
-                  Angeles 2200 Avenue
+                  <IoLocation className="icon icon_pin_alt" /> Office No.1,
+                  First Floor, Hemamh Building, Ben Jubair Street, Al Shawqiyah,
+                  Holly Makkah, K.S.A.
                 </p>
                 <p>
                   <IoMail className="icon icon_mail_alt" />{" "}
                   office@shiftThemes.com
                 </p>
                 <p>
-                  <IoCall className="icon icon_phone" /> 0 555 255 444
+                  <IoCall className="icon icon_phone" /> (012) 5355589
                 </p>
               </address>
             </div>

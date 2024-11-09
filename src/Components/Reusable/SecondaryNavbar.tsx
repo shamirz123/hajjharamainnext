@@ -20,8 +20,6 @@ interface Breadcrumbs {
   path: string;
 }
 
-
-
 interface SecondaryNavbarProps {
   heading: string;
   image: string;
@@ -301,7 +299,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
 
   return (
     <div
-    style={{backgroundImage: `url(${image})`}}
+      style={{ backgroundImage: `url(${image})` }}
       className={`inner-Banner-wrapper header-floating   ${
         isScrolled ? "scrolled" : ""
       } `}
@@ -322,7 +320,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                     </div>
                     <div className="call-icon">
                       <IoIosCall className="icon" />
-                      <span className="mb-0">0 555 255 444</span>
+                      <span className="mb-0">(012) 5355589</span>
                     </div>
                   </div>
                 </div>
@@ -485,8 +483,6 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                               />
                             </a>
                           </li>
-
-                          
                         </ul>
                       </nav>
                     </div>
