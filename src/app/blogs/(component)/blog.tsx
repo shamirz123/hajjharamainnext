@@ -8,7 +8,7 @@ const Blogs = () => {
   return (
     <div className="container pb-5">
       <div className="row mt-5 pt-5">
-        {data?.blogs.map((item, index) => (
+        {data?.blogs.map((item) => (
           <div className="col-md-4 mb-4" key={item.id}>
             <article className="blog-item  p-3">
               <div className="d-flex flex-row">

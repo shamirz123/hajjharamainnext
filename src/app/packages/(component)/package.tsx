@@ -11,7 +11,7 @@ const Packages = () => {
       <div className="section">
         <div className="container">
           <div className="row col-p20">
-            {data?.packages?.items?.map((item, index) => (
+            {data?.packages?.items?.map((item) => (
               <div className="col-sm-6 col-md-4 xs-box3 mb-3" key={item?.id}>
                 <div className="box-services-6">
                   <Image
