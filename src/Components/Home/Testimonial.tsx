@@ -1,5 +1,5 @@
 "use client";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { RiDoubleQuotesR } from "react-icons/ri";
 
@@ -31,15 +31,15 @@ const Testimonials = () => {
   ];
 
   const handleSelect = (selectedIndex: number) => {
-    if (
-      !cooldown &&
-      selectedIndex >= 0 &&
-      selectedIndex < testimonials.length
-    ) {
-      setIndex(selectedIndex);
+    if (!cooldown) {
+      if (selectedIndex < 0) {
+        setIndex(testimonials.length - 1); // Go to last item
+      } else if (selectedIndex >= testimonials.length) {
+        setIndex(0); // Go back to first item
+      } else {
+        setIndex(selectedIndex);
+      }
       setCooldown(true);
-
-      // Cooldown period (300ms)
       setTimeout(() => {
         setCooldown(false);
       }, 300);
@@ -56,10 +56,10 @@ const Testimonials = () => {
 
     const diffX = e.clientX - startX;
 
-    if (diffX > 50 && index > 0) {
+    if (diffX > 50) {
       handleSelect(index - 1);
       setStartX(e.clientX);
-    } else if (diffX < -50 && index < testimonials.length - 1) {
+    } else if (diffX < -50) {
       handleSelect(index + 1);
       setStartX(e.clientX);
     }
@@ -87,6 +87,7 @@ const Testimonials = () => {
                 onSelect={handleSelect}
                 controls={false}
                 indicators={false}
+                // wrap={true} 
               >
                 {testimonials.map((testimonial) => (
                   <Carousel.Item key={testimonial.id}>

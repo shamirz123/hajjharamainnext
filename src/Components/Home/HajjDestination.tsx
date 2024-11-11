@@ -44,9 +44,6 @@ const HajjDestinations = () => {
                 <h3 className="title-uppercased mb0">{service.title}</h3>
                 <div className="br-bottom mb30"></div>
                 <p>{service.details}</p>
-                <Link href="#" className="read-more">
-                  read more <div className="icon arrow_carrot-2right"></div>
-                </Link>
               </div>
             </div>
           ))}

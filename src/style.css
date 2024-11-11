@@ -13088,6 +13088,7 @@ button.mfp-arrow {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     top: inherit;
 }
+
 .inner-banner-top .megamenu .title {
     color: #606269;
 
@@ -13101,6 +13102,14 @@ button.mfp-arrow {
 .menu > li:hover .megamenu {
     display: block;
     opacity: 1 !important; 
+}
+
+.inner-banner-top  .submenu {
+    border-top: 4px solid rgb(252, 200, 19);
+    background-color: #f3f3f3;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    top: inherit;
+    color: #000;
 }
 
 /* Submenu adjustments */
@@ -14056,9 +14065,9 @@ button.mfp-arrow {
     color: #000 !important;
 }
 
-.inner-banner-top .submenu li a {
+/* .inner-banner-top .submenu li a {
     color: #fff !important;
-}
+} */
 
 .inner-banner-top .submenu li a:hover,
 .inner-banner-top li a:hover {
@@ -14468,6 +14477,8 @@ button.mfp-arrow {
 
 /* home css */
 
+
+
 .home-website-detail {
     max-width: 800px;
     width: 100%;
@@ -14616,7 +14627,7 @@ button.mfp-arrow {
     font-size: 10px;
     color: #505359;
     margin-left: -2px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     border-radius: 0;
     border: none;
     border-left: 0 solid rgb(252, 200, 19);
@@ -14919,6 +14930,7 @@ button.mfp-arrow {
 
 
 /* latestProject Page css */
+
 .video-carousel-container .carousel-control-next,
 .video-carousel-container .carousel-control-prev {
     width: 2%;

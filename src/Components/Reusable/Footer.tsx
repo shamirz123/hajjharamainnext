@@ -18,11 +18,6 @@ const Footer = () => {
                 pilgrimage experience with trusted services and dedicated
                 guidance
               </p>
-              <p className="mb0">
-                <a href="#" className="read-more">
-                  read more <i className="icon arrow_carrot-2right"></i>
-                </a>
-              </p>
             </div>
           </div>
           <div className="col-sm-12 col-md-4">

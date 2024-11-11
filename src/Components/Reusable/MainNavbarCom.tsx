@@ -18,7 +18,6 @@ const MainNavbarCom = () => {
           image="/assets/images/demo/banners/contact_us.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
-            { name: "Pages", path: "/contactus" },
             { name: "Contact Us", path: "/contactus" },
           ]}
         />
@@ -31,7 +30,6 @@ const MainNavbarCom = () => {
           image="/assets/images/demo/banners/about_us.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
-            { name: "Pages", path: "/about-us" },
             { name: "About Us", path: "/about-us" },
           ]}
         />
@@ -44,7 +42,7 @@ const MainNavbarCom = () => {
           image="/assets/images/demo/boxed-img.jpg"
           breadcrumbs={[
             { name: "Home", path: "/" },
-            { name: "Pages", path: "/about-us" },
+            { name: "About us", path: "/about-us" },
             { name: "Hajj Guide", path: "/about-us/hajjguide" },
           ]}
         />
@@ -57,7 +55,7 @@ const MainNavbarCom = () => {
           image="/assets/images/demo/boxed-img.jpg"
           breadcrumbs={[
             { name: "Home", path: "/" },
-            { name: "Pages", path: "/about-us" },
+            { name: "About us", path: "/about-us" },
             { name: "Journey", path: "/about-us/journey" },
           ]}
         />
@@ -70,7 +68,6 @@ const MainNavbarCom = () => {
           image="/assets/images/demo/banners/blogs.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
-            { name: "Pages", path: "/blogs" },
             { name: "Blogs", path: "/blogs" },
           ]}
         />
@@ -83,7 +80,6 @@ const MainNavbarCom = () => {
           image="/assets/images/demo/banners/packages.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
-            { name: "Pages", path: "/packages" },
             { name: "Packages", path: "/packages" },
           ]}
         />
@@ -96,7 +92,6 @@ const MainNavbarCom = () => {
           image="/assets/images/demo/banners/served_countris.webp"
           breadcrumbs={[
             { name: "Home", path: "/" },
-            { name: "Pages", path: "/serviced-countries" },
             { name: "Serviced Countries", path: "/serviced-countries" },
           ]}
         />
@@ -109,7 +104,6 @@ const MainNavbarCom = () => {
           image="/assets/images/demo/boxed-img.jpg"
           breadcrumbs={[
             { name: "Home", path: "/" },
-            { name: "Pages", path: "/apply-now" },
             { name: "Apply Now", path: "/apply-now" },
           ]}
         />
