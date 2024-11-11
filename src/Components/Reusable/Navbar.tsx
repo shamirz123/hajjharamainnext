@@ -345,7 +345,7 @@ const Navbar = () => {
                                 <div className="megamenu">
                                   <div className="row">
                                     {item.megamenu.map((section, secIndex) => (
-                                      <div className="col-3" key={secIndex}>
+                                      <div className="col-2" key={secIndex}>
                                         <ul className="megamenu-list">
                                           <li className="title">
                                             {section.title}
