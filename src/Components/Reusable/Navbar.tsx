@@ -292,7 +292,7 @@ const Navbar = () => {
           }  `}
         >
           <div className="sticky-wrapper">
-            <div className="container-fullwidth">
+             <div className="container-fullwidth">
               <div className="row">
                 <div className="col-sm-12">
                   <div

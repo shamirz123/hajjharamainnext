@@ -7512,7 +7512,7 @@ button:active {
 }
 
 .inner-banner-top .shrink .menu>li>a {
-    padding: 30px 13px;
+    padding: 22px 13px;
 }
 
 .header-floating.header-floating-dark .menu-wrapper {
@@ -14472,6 +14472,11 @@ button.mfp-arrow {
 .menu>li>a {
     color: #FFF !important;
 }
+.inner-banner-top .menu>li>a {
+    padding: 30px 18px;
+}
+
+
 
 /* Secondary Navbar End */
 

@@ -2,104 +2,39 @@ import Image from "next/image";
 import React from "react";
 import { BsArrowsAngleExpand } from "react-icons/bs";
 import { GrGallery, GrVideo } from "react-icons/gr"; // Adjust icon imports as necessary
-
-// Sample data for the blog posts
-const blogData = [
-  {
-    id: 1,
-    title: "Sun goes down",
-    author: "Giancarlo Stanton",
-    date: "15 March, 2015",
-    imageUrl: "/assets/images/demo/p01.jpg",
-    description:
-      "You know how it is: When you’re working toward something, keeping your focus is much easier.",
-    type: "image", // "image" or "video"
-    videoUrl: "",
-  },
-  {
-    id: 2,
-    title: "Cecillia and the satellite",
-    author: "Giancarlo Stanton",
-    date: "15 July, 2015",
-    imageUrl: "",
-    description:
-      "You know how it is: When you’re working toward something, keeping your focus is much easier.",
-    type: "video",
-    videoUrl: "https://player.vimeo.com/video/39822385",
-  },
-  {
-    id: 3,
-    title: "Raise your weapon",
-    author: "Giancarlo Stanton",
-    date: "15 December, 2015",
-    imageUrl: "/assets/images/demo/p13.jpg",
-    description:
-      "You know how it is: When you’re working toward something, keeping your focus is much easier.",
-    type: "image",
-  },
-  {
-    id: 4,
-    title: "Teen feet tall",
-    author: "Giancarlo Stanton",
-    date: "15 March, 2015",
-    imageUrl: "/assets/images/demo/p07.jpg",
-    description:
-      "You know how it is: When you’re working toward something, keeping your focus is much easier.",
-    type: "image",
-  },
-  {
-    id: 5,
-    title: "Sweet nothing",
-    author: "Giancarlo Stanton",
-    date: "15 June, 2015",
-    imageUrl: "/assets/images/demo/p10.jpg",
-    description:
-      "You know how it is: When you’re working toward something, keeping your focus is much easier.",
-    type: "image",
-  },
-  {
-    id: 6,
-    title: "Chasing clouds",
-    author: "Giancarlo Stanton",
-    date: "15 May, 2015",
-    imageUrl: "/assets/images/demo/p11.jpg",
-    description:
-      "You know how it is: When you’re working toward something, keeping your focus is much easier.",
-    type: "image",
-  },
-];
+import data from "../../../../public/data.json";
 
 const Blogs = () => {
   return (
     <div className="container pb-5">
       <div className="row mt-5 pt-5">
-        {blogData.map((blog) => (
-          <div className="col-md-4 mb-4" key={blog.id}>
+        {data?.blogs.map((item, index) => (
+          <div className="col-md-4 mb-4" key={item.id}>
             <article className="blog-item  p-3">
               <div className="d-flex flex-row">
                 <div className="p-2">
                   <div className="icon">
-                    {blog.type === "image" ? <GrGallery /> : <GrVideo />}
+                    {item.type === "image" ? <GrGallery /> : <GrVideo />}
                   </div>
                 </div>
                 <div className="p-2">
-                  <h2 className="post-title">{blog.title}</h2>
+                  <h2 className="post-title">{item.title}</h2>
                   <div className="sub-post-title">
                     <span>
-                      by <a href="#">{blog.author}</a>
+                      by <a href="#">{item.author}</a>
                     </span>
                     <span className="separator"> / </span>
-                    <span>{blog.date}</span>
+                    <span>{item.date}</span>
                   </div>
                 </div>
               </div>
 
-              {blog.type === "image" ? (
+              {item.type === "image" ? (
                 <div className="blog-image-wrapper">
                   <figure className="blog-image">
                     <Image
-                      src={blog.imageUrl}
-                      alt={blog.title}
+                      src={item.imageUrl}
+                      alt={item.title}
                       className="img-fluid"
                       width={100}
                       height={100}
@@ -108,7 +43,7 @@ const Blogs = () => {
                   </figure>
                   <div className="">
                     <a
-                      href={blog.imageUrl}
+                      href={item.imageUrl}
                       title="Blog Image"
                       className="blog-expand init-popup image-popup"
                     ></a>
@@ -117,7 +52,7 @@ const Blogs = () => {
               ) : (
                 <div className="blog-image">
                   <iframe
-                    src={blog.videoUrl}
+                    src={item.videoUrl}
                     className="rs-video w-100"
                     frameBorder="0"
                     allowFullScreen
@@ -125,7 +60,7 @@ const Blogs = () => {
                 </div>
               )}
               <div className="blog-caption">
-                <p>{blog.description}</p>
+                <p>{item.description}</p>
                 <p className="mb0">
                   <a className="read-more">
                     read more{" "}

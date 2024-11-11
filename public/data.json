@@ -1,0 +1,272 @@
+{
+  "packages": {
+    "items": [
+      {
+        "id": 1,
+        "image": "/assets/images/demo/p05.jpg",
+        "title": "Responsive Layout",
+        "slug": "responsive-layout",
+        "description": "Clean and easy to use",
+        "details": "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages."
+      },
+      {
+        "id": 2,
+        "image": "/assets/images/demo/p12.jpg",
+        "title": "Bootstrap Based",
+        "slug": "bootstrap-based",
+        "description": "Simple and regular",
+        "details": "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages."
+      },
+      {
+        "id": 3,
+        "image": "/assets/images/demo/p09.jpg",
+        "title": "Detailed Documentation",
+        "slug": "detailed-documentation",
+        "description": "Fully Customizable",
+        "details": "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages."
+      },
+      {
+        "id": 4,
+        "image": "/assets/images/demo/p05.jpg",
+        "title": "Responsive Layout",
+        "slug": "responsive-layout",
+        "description": "Clean and easy to use",
+        "details": "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages."
+      },
+      {
+        "id": 5,
+        "image": "/assets/images/demo/p12.jpg",
+        "title": "Bootstrap Based",
+        "slug": "bootstrap-based",
+        "description": "Simple and regular",
+        "details": "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages."
+      },
+      {
+        "id": 6,
+        "image": "/assets/images/demo/p09.jpg",
+        "title": "Detailed Documentation",
+        "slug": "detailed-documentation",
+        "description": "Fully Customizable",
+        "details": "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages."
+      }
+    ]
+  },
+
+  "journey": [
+    {
+      "id": 1,
+      "title": "Ihram",
+      "slug": "ihram",
+      "imageUrl": "/assets/images/demo/journey/Ihram.webp",
+      "iconUrl": "/assets/images/demo/journey/ihram-icon.webp",
+      "description": "When you go to the holy place of Makkah, the first step to follow is to wear Ihram. It is to show the sincere intention that you are actually ready to perform an Hajj with the core of your heart."
+    },
+    {
+      "id": 2,
+      "slug": "tawaf-al-qudum",
+      "title": "Tawaf Al-Qudum",
+      "imageUrl": "/assets/images/demo/journey/Tawaf_Al-Qudum.webp",
+      "iconUrl": "/assets/images/demo/journey/tawaf-al-qudum.webp",
+      "description": "When you enter Makkah then the step known as Tawaf Al-Qadum comes, in which the person has to take seven rounds around Kaaba and pray two Rakats of Tawaf just behind the Maqam Ibrahim."
+    },
+    {
+      "id": 3,
+      "slug": "sai-between-safa-and-marwa",
+      "title": "Sa'i between Safa and Marwa",
+      "imageUrl": "/assets/images/demo/journey/Sa'i_between_Safa_and_Marwa.webp",
+      "iconUrl": "/assets/images/demo/journey/sai.webp",
+      "description": "In this person has to walk seven times from Safa to Marwa, perform Sa'i between Safa and Marwah."
+    },
+    {
+      "id": 6,
+      "slug": "mina",
+      "title": "Mina",
+      "imageUrl": "/assets/images/demo/journey/Mina.webp",
+      "iconUrl": "/assets/images/demo/journey/minah-icon.webp",
+      "description": "On the morning of Dhul-Hijjah 8, travel to Mina and spend the night, spending the entire night praying and soliciting till the morning of Dhul-Hijjah 9."
+    },
+    {
+      "id": 5,
+      "slug": "arafah",
+      "title": "Arafah",
+      "imageUrl": "/assets/images/demo/journey/Arafah.webp",
+      "iconUrl": "/assets/images/demo/journey/arafah-icon.webp",
+      "description": "Go to Arafat and devote yourself to Allah until sunset on the ninth day of Dhul-Hijjah."
+    },
+    {
+      "id": 4,
+      "title": "Muzdalifah",
+      "slug": "muzdalifah",
+      "imageUrl": "/assets/images/demo/journey/Muzdalifah.webp",
+      "iconUrl": "/assets/images/demo/journey/muzdalifa-icon.webp",
+      "description": "Move to Muzdalifah after sunset on the 9th of Dhul-Hijjah, where you will spend the night and gather seven pebbles for the next Jamarat ceremonies."
+    },
+    {
+      "id": 7,
+      "slug": "pelt-jamrat-al-aqabah",
+      "title": "Pelt Jamrat Al-Aqabah",
+      "imageUrl": "/assets/images/demo/journey/Pelt_Jamrat_Al-Aqabah.webp",
+      "iconUrl": "/assets/images/demo/journey/jamarat-al-icon.webp",
+      "description": "On the 10th day of Dhul-Hijjah, which is Eid, go back to Mina and recite Takbeer while throwing seven pebbles at Jamrat Al-Aqabah."
+    },
+    {
+      "id": 8,
+      "slug": "adhahi",
+      "title": "Adhahi",
+      "imageUrl": "/assets/images/demo/journey/Adhahi.webp",
+      "iconUrl": "/assets/images/demo/journey/adahni-icon.webp",
+      "description": "In order to get closer to Allah, make an Adhahi offering. Adhahi means “To Sacrifice An Animal” in the way of Allah. It is a symbol to show your affection and love."
+    },
+    {
+      "id": 9,
+      "slug": "adhahi",
+      "title": "shave-hair",
+      "imageUrl": "/assets/images/demo/journey/Shave_Hair_or_Trim.webp",
+      "iconUrl": "/assets/images/demo/journey/shave-hair.webp",
+      "description": "Cut or shave your hair. After that, take off your Ihram and put on your normal attire."
+    },
+    {
+      "id": 10,
+      "slug": "tawaf-al-ifada",
+      "title": "Tawaf Al-Ifada",
+      "imageUrl": "/assets/images/demo/journey/Tawaf_Al-Ifada.webp",
+      "iconUrl": "/assets/images/demo/journey/tawaf-icon.webp",
+      "description": "On your way back to Makkah, do the Tawaf Al-Ifada by walking around the Kaaba seven times, and then, if you can, give prayers (rakaat) behind Maqam Ibrahim."
+    },
+    {
+      "id": 11,
+      "slug": "pelting-the-three-jamarat",
+      "title": "Pelting the three Jamarat",
+      "imageUrl": "/assets/images/demo/journey/Pelting_the_three_Jamarat.webp",
+      "iconUrl": "/assets/images/demo/journey/jamarat-tree-icon.webp",
+      "description": "On the eleventh, twelfth, and optional thirteenth days of Dhul-Hijjah, return to Mina and take part in the throwing of the stone to the devil (Satan)."
+    },
+    {
+      "id": 12,
+      "slug": "tawaf-al-wadaa",
+      "title": "Tawaf Al-Wadaa",
+      "imageUrl": "/assets/images/demo/journey/Tawaf_Al-Wadaa.webp",
+      "iconUrl": "/assets/images/demo/journey/tawaf-al-waada.webp",
+      "description": "Perform the Tawaf Al-Wadaa, which involves going around the Kaaba seven times, before leaving Makkah."
+    }
+  ],
+
+  "hajjGuide": [
+    {
+      "title": "Hajj Rituals",
+      "slug": "hajj-rituals",
+      "imageSrc": "/assets/images/demo/hajjguide/tawaf-image.webp",
+      "imageAlt": "blog post",
+      "description": "Hajj, is one of the spiritual journeys to Makkah which is performed every year by the Muslms who are capable of this.It is an important part of Islam and is rooted deeply in the hearts of Muslim Ummah. Hajj, one of the Five Pillars of Islam, is a ritual of migration rather than just a trip. Every Muslim who is physically and financially capable of affording the expense of Hajj is supposed to take part in the holy journey at least one time in their whole life."
+    },
+    {
+      "title": "The Kaaba and Tawaf",
+      "slug": "the-kaaba-and-tawaf",
+      "imageSrc": "/assets/images/demo/hajjguide/tawaf-kaabah-image.webp",
+      "imageAlt": "Kaaba and Tawaf",
+      "description": "The Kaaba, a beautiful cube-shaped building inside Makkah’s Grand Mosque, is of great importance. It is the center point of the Hajj. In Tawaf, pilgrims walk around the Kaaba seven times, symbolizing unity and submission to Allah."
+    },
+    {
+      "title": "Muzdalifah and Rami",
+      "slug": "muzdalifah-and-rami",
+
+      "imageSrc": "/assets/images/demo/hajjguide/hajj-guide-image-1.webp",
+      "imageAlt": "Muzdalifah and Rami",
+      "description": "At Muzdalifah, pilgrims gather pebbles to throw at the three stone pillars in Mina, symbolizing the rejection of evil. This ritual, echoing Prophet Ibrahim's resistance to temptation, unifies Muslims in their shared purpose and commitment."
+    },
+    {
+      "title": "Sa'i",
+      "slug": "sai",
+      "imageSrc": "/assets/images/demo/hajjguide/sai-image.webp",
+      "imageAlt": "Sa'i",
+      "description": "After Tawaf, believers perform Sa’i by walking seven times between the hills of Safa and Marwah. This ritual commemorates the story of Hajar’s search for water for her son Ismail, strengthening the bond of the Islamic community."
+    },
+    {
+      "title": "Tawaf Al-Ifadhah and Tawaf Al-Wadaa",
+      "slug": "tawaf-al-ifadhah-and-tawaf-al-wadaa",
+
+      "imageSrc": "/assets/images/demo/hajjguide/tawaf-al-wadaa.webp",
+      "imageAlt": "Tawaf Al-Ifadhah and Tawaf Al-Wadaa",
+      "description": "After completing Hajj, pilgrims return to the Kaaba for Tawaf Al-Ifadhah, marking the completion of main rituals. They then perform Tawaf Al-Wadaa, symbolizing the timeless principles of equality and devotion to Allah's will."
+    },
+    {
+      "title": "Sacrifice and the Feast",
+      "slug": "sacrifice-and-the-feast",
+      "imageSrc": "/assets/images/demo/hajjguide/hajj-guide-image-2.webp",
+      "imageAlt": "Sacrifice and the Feast",
+      "description": "Pilgrims sacrifice an animal as a tribute to Allah, commemorating Prophet Ibrahim’s willingness to sacrifice his son. The meat is distributed to those in need, embodying compassion and the Islamic principle of sharing."
+    },
+    {
+      "title": "The Day of Arafat",
+      "slug": "sacrifice-and-the-feast",
+      "imageSrc": "/assets/images/demo/hajjguide/arfaat-day.webp",
+      "imageAlt": "the-day-of-arafat",
+      "description": "The Hajj reaches its peak on the Day of Arafat, where pilgrims gather to seek Allah’s mercy and forgiveness. This day is a profound moment for reflection, drawing Muslims closer to Allah. For non-pilgrims, fasting on this day is recommended and is believed to atone for sins of the previous and upcoming years."
+    }
+  ],
+
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Sun goes down",
+      "slug": "sun-goes-down",
+      "author": "Giancarlo Stanton",
+      "date": "15 March, 2015",
+      "imageUrl": "/assets/images/demo/p01.jpg",
+      "description": "You know how it is: When you’re working toward something, keeping your focus is much easier.",
+      "type": "image",
+      "videoUrl": ""
+    },
+    {
+      "id": 2,
+      "title": "Cecillia and the satellite",
+      "slug": "cecillia-and-the-satellite",
+      "author": "Giancarlo Stanton",
+      "date": "15 July, 2015",
+      "imageUrl": "",
+      "description": "You know how it is: When you’re working toward something, keeping your focus is much easier.",
+      "type": "video",
+      "videoUrl": "https://player.vimeo.com/video/39822385"
+    },
+    {
+      "id": 3,
+      "title": "Raise your weapon",
+      "slug": "raise-your-weapon",
+      "author": "Giancarlo Stanton",
+      "date": "15 December, 2015",
+      "imageUrl": "/assets/images/demo/p13.jpg",
+      "description": "You know how it is: When you’re working toward something, keeping your focus is much easier.",
+      "type": "image"
+    },
+    {
+      "id": 4,
+      "title": "Teen feet tall",
+      "slug": "teen-feet-tall",
+      "author": "Giancarlo Stanton",
+      "date": "15 March, 2015",
+      "imageUrl": "/assets/images/demo/p07.jpg",
+      "description": "You know how it is: When you’re working toward something, keeping your focus is much easier.",
+      "type": "image"
+    },
+    {
+      "id": 5,
+      "title": "Sweet nothing",
+      "slug": "sweet-nothing",
+      "author": "Giancarlo Stanton",
+      "date": "15 June, 2015",
+      "imageUrl": "/assets/images/demo/p10.jpg",
+      "description": "You know how it is: When you’re working toward something, keeping your focus is much easier.",
+      "type": "image"
+    },
+    {
+      "id": 6,
+      "title": "Chasing clouds",
+      "slug": "chasing-clouds",
+      "author": "Giancarlo Stanton",
+      "date": "15 May, 2015",
+      "imageUrl": "/assets/images/demo/p11.jpg",
+      "description": "You know how it is: When you’re working toward something, keeping your focus is much easier.",
+      "type": "image"
+    }
+  ]
+}

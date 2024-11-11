@@ -1,57 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import data from "../../../../public/data.json";
 
-const packages = [
-  {
-    id: 1,
-    image: "/assets/images/demo/p05.jpg",
-    title: "Responsive Layout",
-    description: "Clean and easy to use",
-    details:
-      "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.",
-  },
-  {
-    id: 2,
-    image: "/assets/images/demo/p12.jpg",
-    title: "Bootstrap Based",
-    description: "Simple and regular",
-    details:
-      "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.",
-  },
-  {
-    id: 3,
-    image: "/assets/images/demo/p09.jpg",
-    title: "Detailed Documentation",
-    description: "Fully Customizable",
-    details:
-      "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.",
-  },
-  {
-    id: 4,
-    image: "/assets/images/demo/p05.jpg",
-    title: "Responsive Layout",
-    description: "Clean and easy to use",
-    details:
-      "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.",
-  },
-  {
-    id: 5,
-    image: "/assets/images/demo/p12.jpg",
-    title: "Bootstrap Based",
-    description: "Simple and regular",
-    details:
-      "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.",
-  },
-  {
-    id: 6,
-    image: "/assets/images/demo/p09.jpg",
-    title: "Detailed Documentation",
-    description: "Fully Customizable",
-    details:
-      "If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.",
-  },
-];
+
 
 const Packages = () => {
   return (
@@ -59,19 +11,19 @@ const Packages = () => {
       <div className="section">
         <div className="container">
           <div className="row col-p20">
-            {packages.map((pack) => (
-              <div className="col-sm-6 col-md-4 xs-box3 mb-3" key={pack?.id}>
+            {data?.packages?.items?.map((item, index) => (
+              <div className="col-sm-6 col-md-4 xs-box3 mb-3" key={item?.id}>
                 <div className="box-services-6">
                   <Image
-                    src={pack?.image}
+                    src={item?.image}
                     className="br2 responsive-image"
-                    alt={`Image Service ${pack?.title}`}
+                    alt={`Image Service ${item?.title}`}
                     width={200}
                     height={200}
                   />
-                  <h3 className="title-uppercased br-bottom">{pack?.title}</h3>
+                  <h3 className="title-uppercased br-bottom">{item?.title}</h3>
 
-                  <p>{pack?.details}</p>
+                  <p>{item?.details}</p>
                   <Link href="#" className="read-more">
                     read more <div className="icon arrow_carrot-2right"></div>
                   </Link>

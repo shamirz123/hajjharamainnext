@@ -263,7 +263,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
 
     if (mainNavbar) {
       // Check if mainNavbar is not null
-      if (window.scrollY > 10) {
+      if (window.scrollY > 50) {
         setIsScrolled(true);
         setFadeOut(false);
         mainNavbar.classList.add("shrink");
@@ -306,9 +306,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
     >
       <div className="container">
         <div className="bg-overlay gradient-1"></div>
-        <div
-          className={`topbar  d-none d-lg-block ${isScrolled ? "hidden" : ""}`}
-        >
+        <div className="topbar  d-none d-lg-block">
           <div className="main-header">
             <div className="container">
               <div className="row">
@@ -400,7 +398,7 @@ const SecondaryNavbar: React.FC<SecondaryNavbarProps> = ({
                                 <div className="megamenu">
                                   <div className="row">
                                     {item.megamenu.map((section, secIndex) => (
-                                      <div className="col-2" key={secIndex}>
+                                      <div className="col-3" key={secIndex}>
                                         <ul className="megamenu-list">
                                           <li className="title">
                                             {section.title}
